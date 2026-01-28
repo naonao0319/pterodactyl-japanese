@@ -186,11 +186,66 @@ const replacements = [
         regex: />\s*Delete\s*</,
         replace: ">削除<"
     },
-    // 日付・時刻フォーマットの日本語化
+    // ファイル操作メニュー
     {
-        file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
-        regex: /from 'date-fns';(?![\s\S]*import \{ ja \})/,
-        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Rename['"]\}/,
+        replace: "title={'名前変更'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Move['"]\}/,
+        replace: "title={'移動'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Permissions['"]\}/,
+        replace: "title={'権限変更'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Copy['"]\}/,
+        replace: "title={'コピー'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Unarchive['"]\}/,
+        replace: "title={'解凍'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Archive['"]\}/,
+        replace: "title={'アーカイブ'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Download['"]\}/,
+        replace: "title={'ダウンロード'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{['"]Delete['"]\}/,
+        replace: "title={'削除'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /title=\{`Delete \$\{file\.isFile \? 'File' : 'Directory'\}`\}/,
+        replace: "title={`\${file.isFile ? 'ファイル' : 'ディレクトリ'}を削除`}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /confirm=\{['"]Delete['"]\}/,
+        replace: "confirm={'削除'}"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /You will not be able to recover the contents of&nbsp;/,
+        replace: "削除すると復元できません:&nbsp;"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileDropdownMenu.tsx',
+        regex: /<span className=\{['"]font-semibold text-gray-50['"]\}>\{file\.name\}<\/span> once deleted\./,
+        replace: "<span className={'font-semibold text-gray-50'}>{file.name}</span>"
     },
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
