@@ -288,6 +288,221 @@ const replacements = [
         search: ">Read Only<",
         replace: ">読取専用<"
     },
+    // Admin Panel - Dashboard (resources/views/admin/index.blade.php)
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "Administration",
+        replace: "管理画面"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "Administrative Overview",
+        replace: "管理概要"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "<small>A quick glance at your system.</small>",
+        replace: "<small>システムの概要を素早く確認できます。</small>"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        regex: />\s*System Information\s*</,
+        replace: ">システム情報<"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "You are running Pterodactyl Panel version",
+        replace: "現在実行中の Pterodactyl Panel バージョンは"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        regex: /Your panel is up-to-date!/,
+        replace: "パネルは最新です！"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        regex: /Your panel is <strong>not up-to-date!<\/strong>/,
+        replace: "パネルは<strong>最新ではありません！</strong>"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "The latest version is",
+        replace: "最新バージョンは"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "and you are currently running version",
+        replace: "ですが、現在のバージョンは"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "Get Help <small>(via Discord)</small>",
+        replace: "ヘルプ <small>(Discord)</small>"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "Documentation",
+        replace: "ドキュメント"
+    },
+    {
+        file: 'resources/views/admin/index.blade.php',
+        search: "Support the Project",
+        replace: "プロジェクトを支援"
+    },
+    // Admin Panel - Settings (resources/views/admin/settings/index.blade.php)
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "Panel Settings<small>Configure Pterodactyl to your liking.</small>",
+        replace: "パネル設定<small>Pterodactylをお好みに設定します。</small>"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        regex: /<h3 class="box-title">Panel Settings<\/h3>/,
+        replace: '<h3 class="box-title">パネル設定</h3>'
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "Company Name",
+        replace: "会社名/組織名"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "Require 2-Factor Authentication",
+        replace: "二要素認証の強制"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "> Not Required",
+        replace: "> 必須ではない"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "> Admin Only",
+        replace: "> 管理者のみ"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "> All Users",
+        replace: "> 全ユーザー"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "Default Language",
+        replace: "デフォルト言語"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        regex: />Save<\/button>/,
+        replace: ">保存</button>"
+    },
+    // Admin Panel - Users (resources/views/admin/users/index.blade.php)
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "List Users",
+        replace: "ユーザー一覧"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Users<small>All registered users on the system.</small>",
+        replace: "ユーザー<small>システムに登録されている全ユーザー。</small>"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        regex: />\s*User List\s*</,
+        replace: ">ユーザー一覧<"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        regex: />Create New<\/button>/,
+        replace: ">新規作成</button>"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Client Name",
+        replace: "クライアント名"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Username",
+        replace: "ユーザー名"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Servers Owned",
+        replace: "所有サーバー"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Can Access",
+        replace: "アクセス可能"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        title: "Servers that this user is marked as the owner of.",
+        regex: /Servers that this user is marked as the owner of\./,
+        replace: "このユーザーが所有者として設定されているサーバー。"
+    },
+    // Admin Panel - Servers (resources/views/admin/servers/index.blade.php)
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "List Servers",
+        replace: "サーバー一覧"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Servers<small>All servers available on the system.</small>",
+        replace: "サーバー<small>システム上で利用可能な全サーバー。</small>"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        regex: />\s*Server List\s*</,
+        replace: ">サーバー一覧<"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        regex: />\s*Search Servers\s*</, // In placeholder
+        replace: ">サーバー検索<" // This might fail if it's an attribute
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: 'placeholder="Search Servers"',
+        replace: 'placeholder="サーバー検索"'
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Server Name",
+        replace: "サーバー名"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Owner",
+        replace: "所有者"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Node",
+        replace: "ノード"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Connection",
+        replace: "接続"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        regex: />Suspended<\/span>/,
+        replace: ">凍結中</span>"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        regex: />Installing<\/span>/,
+        replace: ">インストール中</span>"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        regex: />Active<\/span>/,
+        replace: ">稼働中</span>"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
