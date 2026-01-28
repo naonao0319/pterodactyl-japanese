@@ -29,13 +29,13 @@ OSに応じたコマンドでNode.js等をインストールします。
 
 **Ubuntu / Debian:**
 ```bash
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
 **CentOS:**
 ```bash
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://rpm.nodesource.com/setup_22.x | sudo -E bash -
 sudo yum install -y nodejs yarn
 ```
 
