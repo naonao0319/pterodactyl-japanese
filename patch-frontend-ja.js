@@ -3700,6 +3700,47 @@ const replacements = [
         search: "backups have been created for this server.",
         replace: "件のバックアップがこのサーバーで作成されています。"
     },
+    // SFTP詳細画面
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "title={'SFTP Details'}",
+        replace: "title={'SFTP 詳細'}"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "<Label>Server Address</Label>",
+        replace: "<Label>サーバーアドレス</Label>"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "<Label>Username</Label>",
+        replace: "<Label>ユーザー名</Label>"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "Your SFTP password is the same as the password you use to access this panel.",
+        replace: "SFTPパスワードは、このパネルにアクセスするために使用するパスワードと同じです。"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: ">Launch SFTP</Button.Text>",
+        replace: ">SFTPを起動</Button.Text>"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "title={'Debug Information'}",
+        replace: "title={'デバッグ情報'}"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "<p>Node</p>",
+        replace: "<p>ノード</p>"
+    },
+    {
+        file: 'resources/scripts/components/server/settings/SettingsContainer.tsx',
+        search: "<p>Server ID</p>",
+        replace: "<p>サーバーID</p>"
+    },
 ];
 
 
