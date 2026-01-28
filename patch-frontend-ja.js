@@ -2901,6 +2901,128 @@ const replacements = [
         regex: /formatDistanceToNowStrict\(\s*activity\.timestamp,\s*\{\s*addSuffix:\s*true\s*\}\s*\)/,
         replace: "formatDistanceToNowStrict(activity.timestamp, { addSuffix: true, locale: ja })"
     },
+    // Application API
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "Application API<small>Control access credentials for managing this Panel via the API.</small>",
+        replace: "アプリケーションAPI<small>APIを介してこのパネルを管理するためのアクセス認証情報を制御します。</small>"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: ">Credentials List<",
+        replace: ">認証情報一覧<"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: ">Create New<",
+        replace: ">新規作成<"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "<th>Key</th>",
+        replace: "<th>キー</th>"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "<th>Memo</th>",
+        replace: "<th>メモ</th>"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "<th>Last Used</th>",
+        replace: "<th>最終使用日</th>"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "<th>Created</th>",
+        replace: "<th>作成日</th>"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "title: 'Revoke API Key'",
+        replace: "title: 'APIキーを失効'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "text: 'Once this API key is revoked any applications currently using it will stop working.'",
+        replace: "text: 'このAPIキーを失効すると、現在使用中のすべてのアプリケーションが動作を停止します。'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "confirmButtonText: 'Revoke'",
+        replace: "confirmButtonText: '失効'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "text: 'API Key has been revoked.'",
+        replace: "text: 'APIキーが失効されました。'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "title: 'Whoops!'",
+        replace: "title: 'エラー！'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: "text: 'An error occurred while attempting to revoke this key.'",
+        replace: "text: 'このキーの失効中にエラーが発生しました。'"
+    },
+    {
+        file: 'resources/views/admin/api/index.blade.php',
+        search: ">Application API</a>",
+        replace: ">アプリケーションAPI</a>"
+    },
+    // Application API - New Credentials
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: "Application API<small>Create a new application API key.</small>",
+        replace: "アプリケーションAPI<small>新しいアプリケーションAPIキーを作成します。</small>"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Application API</a>",
+        replace: ">アプリケーションAPI</a>"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">New Credentials<",
+        replace: ">新規認証情報<"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Select Permissions<",
+        replace: ">権限を選択<"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Read</label>",
+        replace: ">読み取り</label>"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Read &amp; Write</label>",
+        replace: ">読み取り・書き込み</label>"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">None</label>",
+        replace: ">なし</label>"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Description <span",
+        replace: ">説明 <span"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: "Once you have assigned permissions and created this set of credentials you will be unable to come back and edit it. If you need to make changes down the road you will need to create a new set of credentials.",
+        replace: "権限を割り当てて認証情報を作成すると、後から編集することはできません。変更が必要な場合は、新しい認証情報を作成する必要があります。"
+    },
+    {
+        file: 'resources/views/admin/api/new.blade.php',
+        search: ">Create Credentials<",
+        replace: ">認証情報を作成<"
+    },
 ];
 
 
