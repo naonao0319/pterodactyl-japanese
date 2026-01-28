@@ -2346,6 +2346,157 @@ const replacements = [
         search: "This method may leave dangling files on your daemon if it reports an error.",
         replace: "エラーが発生した場合、この方法ではデーモン上にファイルが残る可能性があります。"
     },
+    // Database Host Management
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Database Hosts",
+        replace: "データベースホスト"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Database hosts that servers can have databases created on.",
+        replace: "サーバーがデータベースを作成できるデータベースホスト。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Host List",
+        replace: "ホスト一覧"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Create New Database Host",
+        replace: "新規データベースホスト作成"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "A short identifier used to distinguish this location from others. Must be between 1 and 60 characters, for example, <code>us.nyc.lvl3</code>.",
+        replace: "この場所を他と区別するために使用される短い識別子。1〜60文字である必要があります。例：<code>us.nyc.lvl3</code>。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "The IP address or FQDN that should be used when attempting to connect to this MySQL host <em>from the panel</em> to add new databases.",
+        replace: "新しいデータベースを追加するために<em>パネルから</em>このMySQLホストへの接続を試みるときに使用する必要があるIPアドレスまたはFQDN。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "The port that MySQL is running on for this host.",
+        replace: "このホストでMySQLが実行されているポート。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "The username of an account that has enough permissions to create new users and databases on the system.",
+        replace: "システム上で新しいユーザーとデータベースを作成するのに十分な権限を持つアカウントのユーザー名。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "The password to the account defined.",
+        replace: "定義されたアカウントのパスワード。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Linked Node",
+        replace: "リンクされたノード"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "This setting does nothing other than default to this database host when adding a database to a server on the selected node.",
+        replace: "この設定は、選択されたノード上のサーバーにデータベースを追加するときに、このデータベースホストをデフォルトにする以外の機能はありません。"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "The account defined for this database host <strong>must</strong> have the <code>WITH GRANT OPTION</code> permission. If the defined account does not have this permission requests to create databases <em>will</em> fail. <strong>Do not use the same account details for MySQL that you have defined for this panel.</strong>",
+        replace: "このデータベースホストに定義されたアカウントは、<code>WITH GRANT OPTION</code> 権限を持っている<strong>必要があります</strong>。定義されたアカウントにこの権限がない場合、データベース作成リクエストは失敗<em>します</em>。<strong>このパネル用に定義したMySQLアカウントの詳細と同じものを使用しないでください。</strong>"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Database Hosts &rarr; View &rarr; {{ $host->name }}",
+        replace: "データベースホスト &rarr; 詳細 &rarr; {{ $host->name }}"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Viewing associated databases and details for this database host.",
+        replace: "このデータベースホストに関連するデータベースと詳細を表示しています。"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Host Details",
+        replace: "ホスト詳細"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "User Details",
+        replace: "ユーザー詳細"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "The password to the account defined. Leave blank to continue using the assigned password.",
+        replace: "定義されたアカウントのパスワード。割り当てられたパスワードを使い続ける場合は空欄のままにしてください。"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "The account defined for this database host <strong>must</strong> have the <code>WITH GRANT OPTION</code> permission. If the defined account does not have this permission requests to create databases <em>will</em> fail. <strong>Do not use the same account details for MySQL that you have defined for this panel.</strong>",
+        replace: "このデータベースホストに定義されたアカウントは、<code>WITH GRANT OPTION</code> 権限を持っている<strong>必要があります</strong>。定義されたアカウントにこの権限がない場合、データベース作成リクエストは失敗<em>します</em>。<strong>このパネル用に定義したMySQLアカウントの詳細と同じものを使用しないでください。</strong>"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Databases",
+        replace: "データベース"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Database Name",
+        replace: "データベース名"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Connections From",
+        replace: "接続元"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Max Connections",
+        replace: "最大接続数"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Unlimited",
+        replace: "無制限"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Save",
+        replace: "保存"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "Manage",
+        replace: "管理"
+    },
+    {
+        file: 'resources/views/admin/databases/view.blade.php',
+        search: "None",
+        replace: "なし"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Cancel",
+        replace: "キャンセル"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "Create",
+        replace: "作成"
+    },
+    {
+        file: 'resources/views/admin/databases/index.blade.php',
+        search: "None",
+        replace: "なし"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
