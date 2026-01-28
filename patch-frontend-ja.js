@@ -1924,6 +1924,331 @@ const replacements = [
         search: "Servers",
         replace: "サーバー"
     },
+    // Server View - Index
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Information",
+        replace: "情報"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Internal Identifier",
+        replace: "内部ID"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "External Identifier",
+        replace: "外部ID"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "UUID / Docker Container ID",
+        replace: "UUID / DockerコンテナID"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Current Egg",
+        replace: "現在のEgg"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "CPU Pinning",
+        replace: "CPUピン留め"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Block IO Weight",
+        replace: "ブロックIOウェイト"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Default Connection",
+        replace: "デフォルト接続"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Connection Alias",
+        replace: "接続エイリアス"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "No Alias Assigned",
+        replace: "エイリアス未割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "More info",
+        replace: "詳細情報"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Server Node",
+        replace: "サーバーノード"
+    },
+    // Server View - Build
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Control allocations and system resources for this server.",
+        replace: "このサーバーの割り当てとシステムリソースを制御します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Each <em>virtual</em> core (thread) on the system is considered to be <code>100%</code>. Setting this value to <code>0</code> will allow a server to use CPU time without restrictions.",
+        replace: "システムの各<em>仮想</em>コア（スレッド）は<code>100%</code>と見なされます。この値を<code>0</code>に設定すると、サーバーは制限なしでCPU時間を使用できます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Enter the specific CPU cores that this process can run on, or leave blank to allow all cores. This can be a single number, or a comma seperated list. Example: <code>0</code>, <code>0-1,3</code>, or <code>0,1,3,4</code>.",
+        replace: "このプロセスを実行できる特定のCPUコアを入力するか、空白のままにしてすべてのコアを許可します。単一の数値、またはカンマ区切りのリストを指定できます。例：<code>0</code>、<code>0-1,3</code>、または<code>0,1,3,4</code>。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The maximum amount of memory allowed for this container. Setting this to <code>0</code> will allow unlimited memory in a container.",
+        replace: "このコンテナに許可される最大メモリ容量。これを<code>0</code>に設定すると、コンテナ内のメモリが無制限になります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Setting this to <code>0</code> will disable swap space on this server. Setting to <code>-1</code> will allow unlimited swap.",
+        replace: "これを<code>0</code>に設定すると、このサーバーのスワップ領域が無効になります。<code>-1</code>に設定すると、スワップが無制限になります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "This server will not be allowed to boot if it is using more than this amount of space. If a server goes over this limit while running it will be safely stopped and locked until enough space is available. Set to <code>0</code> to allow unlimited disk usage.",
+        replace: "この容量を超えて使用している場合、サーバーは起動できません。実行中にこの制限を超えた場合、サーバーは安全に停止され、十分な容量が確保されるまでロックされます。ディスク使用量を無制限にするには<code>0</code>に設定します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The IO performance of this server relative to other <em>running</em> containers on the system. Value should be between <code>10</code> and <code>1000</code>.</code>",
+        replace: "システム上の他の<em>実行中</em>コンテナに対するこのサーバーのIOパフォーマンス。値は<code>10</code>から<code>1000</code>の間である必要があります。</code>"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Enabling OOM killer may cause server processes to exit unexpectedly.",
+        replace: "OOM Killerを有効にすると、サーバープロセスが予期せず終了する可能性があります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Application Feature Limits",
+        replace: "アプリケーション機能制限"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The total number of databases a user is allowed to create for this server.",
+        replace: "ユーザーがこのサーバー用に作成できるデータベースの総数。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The total number of allocations a user is allowed to create for this server.",
+        replace: "ユーザーがこのサーバー用に作成できる割り当ての総数。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The total number of backups that can be created for this server.",
+        replace: "このサーバー用に作成できるバックアップの総数。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Allocation Management",
+        replace: "割り当て管理"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Game Port",
+        replace: "ゲームポート"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "The default connection address that will be used for this game server.",
+        replace: "このゲームサーバーに使用されるデフォルトの接続アドレス。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Assign Additional Ports",
+        replace: "追加ポートの割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Please note that due to software limitations you cannot assign identical ports on different IPs to the same server.",
+        replace: "ソフトウェアの制限により、異なるIP上の同一ポートを同じサーバーに割り当てることはできませんのでご注意ください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Remove Additional Ports",
+        replace: "追加ポートの削除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Simply select which ports you would like to remove from the list above. If you want to assign a port on a different IP that is already in use you can select it from the left and delete it here.",
+        replace: "上のリストから削除したいポートを選択してください。すでに使用中の別のIP上のポートを割り当てたい場合は、左側から選択してここで削除できます。"
+    },
+    // Server View - Startup
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Control startup command as well as variables.",
+        replace: "起動コマンドと変数を制御します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Startup Command Modification",
+        replace: "起動コマンドの変更"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Edit your server's startup command here. The following variables are available by default:",
+        replace: "ここでサーバーの起動コマンドを編集します。デフォルトで以下の変数が利用可能です："
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Default Service Start Command",
+        replace: "デフォルトのサービス起動コマンド"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Save Modifications",
+        replace: "変更を保存"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Service Configuration",
+        replace: "サービス構成"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Changing any of the below values will result in the server processing a re-install command. The server will be stopped and will then proceed.",
+        replace: "以下の値を変更すると、サーバーは再インストールコマンドを処理します。サーバーは停止し、その後処理が続行されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "If you would like the service scripts to not run, ensure the box is checked at the bottom.",
+        replace: "サービススクリプトを実行したくない場合は、下部のボックスにチェックが入っていることを確認してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "This is a destructive operation in many cases. This server will be stopped immediately in order for this action to proceed.",
+        replace: "これは多くの場合、破壊的な操作です。このアクションを実行するため、サーバーは直ちに停止されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Select the Nest that this server will be grouped into.",
+        replace: "このサーバーをグループ化するNestを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Select the Egg that will provide processing data for this server.",
+        replace: "このサーバーの処理データを提供するEggを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "If the selected Egg has an install script attached to it, the script will run during install. If you would like to skip this step, check this box.",
+        replace: "選択したEggにインストールスクリプトが添付されている場合、インストール中にスクリプトが実行されます。この手順をスキップしたい場合は、このボックスにチェックを入れてください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Docker Image Configuration",
+        replace: "Dockerイメージ構成"
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "Or enter a custom image...",
+        replace: "またはカスタムイメージを入力..."
+    },
+    {
+        file: 'resources/views/admin/servers/view/startup.blade.php',
+        search: "This is the Docker image that will be used to run this server. Select an image from the dropdown or enter a custom image in the text field above.",
+        replace: "このサーバーの実行に使用されるDockerイメージです。ドロップダウンからイメージを選択するか、上のテキストフィールドにカスタムイメージを入力してください。"
+    },
+    // Server View - Database
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Manage server databases.",
+        replace: "サーバーデータベースを管理します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Database passwords can be viewed when <a href=\"/server/{{ $server->uuidShort }}/databases\">visiting this server</a> on the front-end.",
+        replace: "データベースのパスワードは、フロントエンドで<a href=\"/server/{{ $server->uuidShort }}/databases\">このサーバーにアクセス</a>すると確認できます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Active Databases",
+        replace: "アクティブなデータベース"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Connections From",
+        replace: "接続元"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Max Connections",
+        replace: "最大接続数"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Create New Database",
+        replace: "新規データベース作成"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Database Host",
+        replace: "データベースホスト"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Select the host database server that this database should be created on.",
+        replace: "このデータベースを作成するホストデータベースサーバーを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "This should reflect the IP address that connections are allowed from. Uses standard MySQL notation. If unsure leave as <code>%</code>.",
+        replace: "接続を許可するIPアドレスを反映させる必要があります。標準のMySQL表記を使用します。不明な場合は<code>%</code>のままにしてください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Concurrent Connections",
+        replace: "同時接続数"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "This should reflect the max number of concurrent connections from this user to the database. Leave empty for unlimited.",
+        replace: "このユーザーからデータベースへの最大同時接続数を反映させる必要があります。無制限にする場合は空のままにしてください。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "A username and password for this database will be randomly generated after form submission.",
+        replace: "このデータベースのユーザー名とパスワードは、フォーム送信後にランダムに生成されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/database.blade.php',
+        search: "Create Database",
+        replace: "データベース作成"
+    },
+    // Server View - Mounts
+    {
+        file: 'resources/views/admin/servers/view/mounts.blade.php',
+        search: "Manage server mounts.",
+        replace: "サーバーマウントを管理します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/mounts.blade.php',
+        search: "Available Mounts",
+        replace: "利用可能なマウント"
+    },
+    {
+        file: 'resources/views/admin/servers/view/mounts.blade.php',
+        search: "Source",
+        replace: "ソース"
+    },
+    {
+        file: 'resources/views/admin/servers/view/mounts.blade.php',
+        search: "Target",
+        replace: "ターゲット"
+    },
+    {
+        file: 'resources/views/admin/servers/view/mounts.blade.php',
+        search: "Status",
+        replace: "ステータス"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
