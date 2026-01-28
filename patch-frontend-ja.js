@@ -1694,6 +1694,176 @@ const replacements = [
         search: "Toggle インストールステータス",
         replace: "インストールステータス切り替え"
     },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "All users registered on the system.",
+        replace: "システムに登録されている全ユーザー。"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Client Name",
+        replace: "クライアント名"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Username",
+        replace: "ユーザー名"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Owned Servers",
+        replace: "所有サーバー"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Servers that this user is marked as the owner of.",
+        replace: "このユーザーが所有者として設定されているサーバー。"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Can Access",
+        replace: "アクセス可能"
+    },
+    {
+        file: 'resources/views/admin/users/index.blade.php',
+        search: "Servers that this user can access because they are marked as a subuser.",
+        replace: "このユーザーがサブユーザーとして設定されているサーバー。"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Create User",
+        replace: "ユーザー作成"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Add a new user to the system.",
+        replace: "システムに新しいユーザーを追加します。"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Identity",
+        replace: "ID情報"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Client First Name",
+        replace: "名 (First Name)"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Client Last Name",
+        replace: "姓 (Last Name)"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Default Language",
+        replace: "デフォルト言語"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "The default language to use when rendering the Panel for this user.",
+        replace: "このユーザーのパネル表示に使用するデフォルト言語。"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Permissions",
+        replace: "権限"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Administrator",
+        replace: "管理者"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Setting this to 'Yes' gives a user full administrative access.",
+        replace: "「はい」に設定すると、ユーザーに完全な管理者権限が付与されます。"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Password",
+        replace: "パスワード"
+    },
+    {
+        file: 'resources/views/admin/users/new.blade.php',
+        search: "Providing a user password is optional. New user emails prompt users to create a password the first time they login. If a password is provided here you will need to find a different method of providing it to the user.",
+        replace: "ユーザーパスワードの設定は任意です。新規ユーザーメールは、初回ログイン時にパスワードの作成をユーザーに求めます。ここでパスワードを設定する場合は、別の方法でユーザーに通知する必要があります。"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Manage User",
+        replace: "ユーザー管理"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Identity",
+        replace: "ID情報"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Client First Name",
+        replace: "名 (First Name)"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Client Last Name",
+        replace: "姓 (Last Name)"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Default Language",
+        replace: "デフォルト言語"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "The default language to use when rendering the Panel for this user.",
+        replace: "このユーザーのパネル表示に使用するデフォルト言語。"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Update User",
+        replace: "ユーザー更新"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Permissions",
+        replace: "権限"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Administrator",
+        replace: "管理者"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Setting this to 'Yes' gives a user full administrative access.",
+        replace: "「はい」に設定すると、ユーザーに完全な管理者権限が付与されます。"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Password",
+        replace: "パスワード"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Leave blank to keep this user's password the same. User will not receive any notification if password is changed.",
+        replace: "パスワードを変更しない場合は空白のままにしてください。変更してもユーザーには通知されません。"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "Delete User",
+        replace: "ユーザー削除"
+    },
+    {
+        file: 'resources/views/admin/users/view.blade.php',
+        search: "There must be no servers associated with this account in order for it to be deleted.",
+        replace: "このアカウントを削除するには、アカウントに関連付けられているサーバーがない必要があります。"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
