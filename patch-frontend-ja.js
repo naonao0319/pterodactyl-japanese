@@ -3319,6 +3319,32 @@ const replacements = [
         search: "'Save changes'",
         replace: "'変更を保存'"
     },
+    // データベース関連のエラーメッセージ
+    {
+        file: 'resources/scripts/components/server/databases/DatabasesContainer.tsx',
+        search: "'It looks like you have no databases.'",
+        replace: "'データベースがまだありません。'"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/DatabaseController.php',
+        search: "sprintf('There was an error while trying to connect to the host or while executing a query: \"%s\"', $exception->getMessage())",
+        replace: "sprintf('ホストへの接続またはクエリ実行中にエラーが発生しました: 「%s」', $exception->getMessage())"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/DatabaseController.php',
+        search: "'Successfully created a new database host on the system.'",
+        replace: "'データベースホストを正常に作成しました。'"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/DatabaseController.php',
+        search: "'Database host was updated successfully.'",
+        replace: "'データベースホストを正常に更新しました。'"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/DatabaseController.php',
+        search: "'The requested database host has been deleted from the system.'",
+        replace: "'データベースホストを削除しました。'"
+    },
 ];
 
 
