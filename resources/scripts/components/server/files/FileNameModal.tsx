@@ -4,17 +4,11 @@ import { Form, Formik, FormikHelpers } from 'formik';
 import { object, string } from 'yup';
 import Field from '@/components/elements/Field';
 import { ServerContext } from '@/state/server';
-import { join } from 'pathe';
-import tw from 'twin.macro';
-import Button from '@/components/elements/Button';
-
-type Props = RequiredModalProps & {
-    onFileNamed: (name: string) => void;
+const join = (part1: string, part2: string) => {
+    const p1 = part1.endsWith('/') ? part1.slice(0, -1) : part1;
+    const p2 = part2.startsWith('/') ? part2.slice(1) : part2;
+    return `${p1}/${p2}`;
 };
-
-interface Values {
-    fileName: string;
-}
 
 export default ({ onFileNamed, onDismissed, ...props }: Props) => {
     const directory = ServerContext.useStoreState((state) => state.files.directory);
