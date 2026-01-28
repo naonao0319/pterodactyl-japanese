@@ -2,6 +2,42 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ServerContext } from '@/state/server';
 import { Form, Formik, FormikHelpers } from 'formik';
 import Field from '@/components/elements/Field';
+import { object, string } from 'yup';
+import createDirectory from '@/api/server/files/createDirectory';
+import tw from 'twin.macro';
+import { Button } from '@/components/elements/button/index';
+import { FileObject } from '@/api/server/files/loadDirectory';
+import { useFlashKey } from '@/plugins/useFlash';
+import useFileManagerSwr from '@/plugins/useFileManagerSwr';
+import { WithClassname } from '@/components/types';
+import FlashMessageRender from '@/components/FlashMessageRender';
+import { Dialog, DialogWrapperContext } from '@/components/elements/dialog';
+import Code from '@/components/elements/Code';
+import asDialog from '@/hoc/asDialog';
+
+interface Values {
+    directoryName: string;
+}
+
+const schema = object().shape({
+    directoryName: string().required('A valid directory name must be provided.'),
+});
+
+const generateDirectoryData = (name: string): FileObject => ({
+    key: `dir_${name.split('/', 1)[0] ?? name}`,
+    name: name.replace(/^(\/*)/, '').split('/', 1)[0] ?? name,
+    mode: 'drwxr-xr-x',
+    modeBits: '0755',
+    size: 0,
+    isFile: false,
+    isSymlink: false,
+    mimetype: '',
+    createdAt: new Date(),
+    modifiedAt: new Date(),
+    isArchiveType: () => false,
+    isEditable: () => false,
+});
+
 const join = (part1: string, part2: string) => {
     const p1 = part1.endsWith('/') ? part1.slice(0, -1) : part1;
     const p2 = part2.startsWith('/') ? part2.slice(1) : part2;

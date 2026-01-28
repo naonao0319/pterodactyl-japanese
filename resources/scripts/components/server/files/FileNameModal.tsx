@@ -4,6 +4,17 @@ import { Form, Formik, FormikHelpers } from 'formik';
 import { object, string } from 'yup';
 import Field from '@/components/elements/Field';
 import { ServerContext } from '@/state/server';
+import tw from 'twin.macro';
+import Button from '@/components/elements/Button';
+
+type Props = RequiredModalProps & {
+    onFileNamed: (name: string) => void;
+};
+
+interface Values {
+    fileName: string;
+}
+
 const join = (part1: string, part2: string) => {
     const p1 = part1.endsWith('/') ? part1.slice(0, -1) : part1;
     const p2 = part2.startsWith('/') ? part2.slice(1) : part2;
