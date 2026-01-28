@@ -570,9 +570,94 @@ const replacements = [
         replace: "プロキシ配下ではない"
     },
     {
-        file: 'resources/views/admin/nodes/view/allocation.blade.php',
-        search: "ポート Deleted!",
-        replace: "ポートが削除されました！"
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "BASIC ADMINISTRATION",
+        replace: "基本管理"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Overview",
+        replace: "概要"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Settings",
+        replace: "設定"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Application API",
+        replace: "アプリケーションAPI"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "MANAGEMENT",
+        replace: "管理"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Databases",
+        replace: "データベース"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Locations",
+        replace: "ロケーション"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Nodes",
+        replace: "ノード"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Servers",
+        replace: "サーバー"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Users",
+        replace: "ユーザー"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "SERVICE MANAGEMENT",
+        replace: "サービス管理"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Mounts",
+        replace: "マウント"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Nests",
+        replace: "ネスト"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Exit Admin Control",
+        replace: "管理者画面を終了"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Logout",
+        replace: "ログアウト"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Do you want to log out?",
+        replace: "ログアウトしますか？"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "Log out",
+        replace: "ログアウト"
+    },
+    {
+        file: 'resources/views/layouts/admin.blade.php',
+        search: "There was an error validating the data provided.",
+        replace: "提供されたデータの検証中にエラーが発生しました。"
     },
     {
         file: 'resources/views/admin/nodes/new.blade.php',
