@@ -570,6 +570,11 @@ const replacements = [
         replace: "プロキシ配下ではない"
     },
     {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "ポート Deleted!",
+        replace: "ポートが削除されました！"
+    },
+    {
         file: 'resources/views/admin/nodes/new.blade.php',
         regex: /Label for="pProxyTrue">\s*Behind Proxy\s*<\/label>/,
         replace: 'label for="pProxyTrue"> プロキシ配下 </label>'
