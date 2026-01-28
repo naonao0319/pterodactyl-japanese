@@ -135,6 +135,57 @@ const replacements = [
         search: "{hours}h {minutes}m {seconds}s",
         replace: "{hours}時間 {minutes}分 {seconds}秒"
     },
+    // ファイルマネージャー
+    {
+        file: 'resources/scripts/components/server/files/FileManagerContainer.tsx',
+        regex: />\s*New File\s*</,
+        replace: ">新規ファイル<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/UploadButton.tsx',
+        regex: />\s*Upload\s*</,
+        replace: ">アップロード<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/UploadButton.tsx',
+        search: "Drag and drop files to upload.",
+        replace: "ファイルをドラッグ＆ドロップしてアップロード"
+    },
+    {
+        file: 'resources/scripts/components/server/files/NewDirectoryButton.tsx',
+        regex: />\s*Create Directory\s*</,
+        replace: ">ディレクトリ作成<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/NewDirectoryButton.tsx',
+        regex: />\s*Create\s*</,
+        replace: ">作成<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/NewDirectoryButton.tsx',
+        regex: />\s*Cancel\s*</,
+        replace: ">キャンセル<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileNameModal.tsx',
+        regex: />\s*Create File\s*</,
+        replace: ">ファイル作成<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/MassActionsBar.tsx',
+        regex: />\s*Move\s*</,
+        replace: ">移動<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/MassActionsBar.tsx',
+        regex: />\s*Archive\s*</,
+        replace: ">アーカイブ<"
+    },
+    {
+        file: 'resources/scripts/components/server/files/MassActionsBar.tsx',
+        regex: />\s*Delete\s*</,
+        replace: ">削除<"
+    },
 ];
 
 console.log('Applying Japanese patch to frontend source code...');
@@ -142,7 +193,7 @@ console.log('Applying Japanese patch to frontend source code...');
 let successCount = 0;
 let failCount = 0;
 
-replacements.forEach(({ file, search, replace }) => {
+replacements.forEach(({ file, search, replace, regex }) => {
     const filePath = path.join(__dirname, file);
 
     if (fs.existsSync(filePath)) {
@@ -154,15 +205,25 @@ replacements.forEach(({ file, search, replace }) => {
             return;
         }
 
-        if (content.includes(search)) {
-            // グローバル置換する場合は replaceAll または正規表現を使用
-            // ここでは単純な replace (最初の1つ) だが、必要に応じて修正
+        let matched = false;
+        if (regex) {
+            // Regex replacement
+            if (regex.test(content)) {
+                content = content.replace(regex, replace);
+                matched = true;
+            }
+        } else if (content.includes(search)) {
+            // String replacement
             content = content.split(search).join(replace);
+            matched = true;
+        }
+
+        if (matched) {
             fs.writeFileSync(filePath, content, 'utf8');
             console.log(`[OK] Patched: ${file}`);
             successCount++;
         } else {
-            console.warn(`[WARN] Pattern not found in ${file}: "${search}"`);
+            console.warn(`[WARN] Pattern not found in ${file}: "${search || regex}"`);
             failCount++;
         }
     } else {
