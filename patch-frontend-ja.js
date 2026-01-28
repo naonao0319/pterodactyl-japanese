@@ -3632,6 +3632,74 @@ const replacements = [
         search: "'read' => 'Allows a user to view the activity logs for the server.',",
         replace: "'read' => 'サーバーのアクティビティログを表示できるようにします。',"
     },
+    // サブユーザー画面
+    {
+        file: 'resources/scripts/components/server/users/UsersContainer.tsx',
+        search: "It looks like you don&apos;t have any subusers.",
+        replace: "サブユーザーがいないようです。"
+    },
+    // バックアップコンテキストメニュー
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: ">Download</span>",
+        replace: ">ダウンロード</span>"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: ">Restore</span>",
+        replace: ">復元</span>"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: ">Delete</span>",
+        replace: ">削除</span>"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "backup.isLocked ? 'Unlock' : 'Lock'",
+        replace: "backup.isLocked ? 'ロック解除' : 'ロック'"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "confirm={'Restore'}",
+        replace: "confirm={'復元'}"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "confirm={'Continue'}",
+        replace: "confirm={'続行'}"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "This backup will no longer be protected from automated or accidental deletions.",
+        replace: "このバックアップは自動または誤操作による削除から保護されなくなります。"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "This is a permanent operation. The backup cannot be recovered once deleted.",
+        replace: "この操作は永久的です。削除後はバックアップを復元できません。"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "Your server will be stopped. You will not be able to control the power state, access the file",
+        replace: "サーバーは停止されます。復元が完了するまで、電源状態の制御、ファイル"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "manager, or create additional backups until completed.",
+        replace: "マネージャーへのアクセス、追加のバックアップ作成ができません。"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupContextMenu.tsx',
+        search: "Delete all files before restoring backup.",
+        replace: "バックアップを復元する前にすべてのファイルを削除する。"
+    },
+    // バックアップカウント
+    {
+        file: 'resources/scripts/components/server/backups/BackupContainer.tsx',
+        search: "backups have been created for this server.",
+        replace: "件のバックアップがこのサーバーで作成されています。"
+    },
 ];
 
 
