@@ -615,6 +615,561 @@ const replacements = [
         replace: "Daemon SFTP ポート"
     },
     {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Configure your node settings.",
+        replace: "ノードの設定を構成します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Node Name",
+        replace: "ノード名"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        regex: /Character limits: <code>a-zA-Z0-9_\.-<\/code> and <code>\[Space\]<\/code> \(min 1, max 100 characters\)./,
+        replace: "文字制限: <code>a-zA-Z0-9_.-</code> および <code>[Space]</code> (最小1文字、最大100文字)。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Description",
+        replace: "説明"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Location",
+        replace: "ロケーション"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        regex: /Allow Automatic Allocation <sup><a data-toggle="tooltip" data-placement="top" title="Allow automatic allocation to this Node\?">\?<\/a><\/sup>/,
+        replace: '自動割り当てを許可 <sup><a data-toggle="tooltip" data-placement="top" title="このノードへの自動割り当てを許可しますか？">?</a></sup>'
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Fully Qualified Domain Name",
+        replace: "完全修飾ドメイン名 (FQDN)"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        regex: /Please enter domain name \(e.g <code>node.example.com<\/code>\) to be used for connecting to the daemon. An IP address may only be used <em>only<\/em> if you are not using SSL for this node./,
+        replace: "デーモンへの接続に使用するドメイン名（例: <code>node.example.com</code>）を入力してください。SSLを使用しない場合のみ、IPアドレスを使用できます。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Why do I need a FQDN?",
+        replace: "なぜFQDNが必要なのですか？"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "In order to secure communications between your server and this node we use SSL. We cannot generate a SSL certificate for IP Addresses, and as such you will need to provide a FQDN.",
+        replace: "サーバーとこのノード間の通信を保護するためにSSLを使用します。IPアドレスに対してSSL証明書を生成することはできないため、FQDNを提供する必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Communicate Over SSL",
+        replace: "SSL通信"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Use SSL Connection",
+        replace: "SSL接続を使用"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Use HTTP Connection",
+        replace: "HTTP接続を使用"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "In most cases you should select to use a SSL connection. If using an IP Address or you do not wish to use SSL at all, select a HTTP connection.",
+        replace: "ほとんどの場合、SSL接続を選択する必要があります。IPアドレスを使用する場合や、SSLを使用したくない場合は、HTTP接続を選択してください。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Not Behind Proxy",
+        replace: "プロキシ配下ではない"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        regex: /Behind Proxy\s*<\/label>/,
+        replace: "プロキシ配下 </label>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "If you are running the daemon behind a proxy such as Cloudflare, select this to have the daemon skip looking for certificates on boot.",
+        replace: "Cloudflareなどのプロキシ配下でデーモンを実行している場合は、これを選択して、起動時にデーモンが証明書を探さないようにします。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Maintenance Mode",
+        replace: "メンテナンスモード"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: " Disabled",
+        replace: " 無効"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: " Enabled",
+        replace: " 有効"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "If the node is marked as 'Under Maintenance' users won't be able to access servers that are on this node.",
+        replace: "ノードが「メンテナンス中」としてマークされている場合、ユーザーはこのノード上のサーバーにアクセスできなくなります。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Allocation Limits",
+        replace: "割り当て制限"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Total Memory",
+        replace: "合計メモリ"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Overallocate",
+        replace: "オーバーアロケーション"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Enter the total amount of memory available on this node for allocation to servers. You may also provide a percentage that can allow allocation of more than the defined memory.",
+        replace: "このノードでサーバーへの割り当てに使用できる合計メモリを入力します。定義されたメモリ以上の割り当てを許可する割合を指定することもできます。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Disk Space",
+        replace: "ディスク容量"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Enter the total amount of disk space available on this node for server allocation. You may also provide a percentage that will determine the amount of disk space over the set limit to allow.",
+        replace: "このノードでサーバーの割り当てに使用できる合計ディスク容量を入力します。許可する制限を超えるディスク容量の量を決定する割合を指定することもできます。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "General Configuration",
+        replace: "一般設定"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Maximum Web Upload Filesize",
+        replace: "最大Webアップロードファイルサイズ"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Enter the maximum size of files that can be uploaded through the web-based file manager.",
+        replace: "Webベースのファイルマネージャーを介してアップロードできるファイルの最大サイズを入力します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Daemon Port",
+        replace: "Daemon ポート"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Daemon SFTP Port",
+        replace: "Daemon SFTP ポート"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "The daemon runs its own SFTP management container and does not use the SSHd process on the main physical server.",
+        replace: "デーモンは独自のSFTP管理コンテナを実行し、メインの物理サーバー上のSSHdプロセスを使用しません。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Do not use the same port that you have assigned for your physical server's SSH process.",
+        replace: "物理サーバーのSSHプロセスに割り当てたポートと同じポートを使用しないでください。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Save Settings",
+        replace: "設定を保存"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Reset Daemon Master Key",
+        replace: "Daemonマスターキーをリセット"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: "Resetting the daemon master key will void any request coming from the old key. This key is used for all sensitive operations on the daemon including server creation and deletion. We suggest changing this key regularly for security.",
+        replace: "デーモンマスターキーをリセットすると、古いキーからのリクエストは無効になります。このキーは、サーバーの作成や削除など、デーモン上のすべての機密操作に使用されます。セキュリティのために、定期的にこのキーを変更することをお勧めします。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "A quick overview of your node.",
+        replace: "ノードの概要です。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        regex: /<h3 class="box-title">Information<\/h3>/,
+        replace: '<h3 class="box-title">情報</h3>'
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Daemon Version",
+        replace: "Daemon バージョン"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "(Latest:",
+        replace: "(最新:"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "System Information",
+        replace: "システム情報"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Total CPU Threads",
+        replace: "合計CPUスレッド数"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        regex: /<div class="box-header with-border">\s*Description\s*<\/div>/,
+        replace: '<div class="box-header with-border"> 説明 </div>'
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Delete Node",
+        replace: "ノードを削除"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Deleting a node is a irreversible action and will immediately remove this node from the panel. There must be no servers associated with this node in order to continue.",
+        replace: "ノードの削除は取り消せない操作であり、パネルからこのノードが即座に削除されます。続行するには、このノードに関連付けられているサーバーがない必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Yes, Delete This Node",
+        replace: "はい、このノードを削除します"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "At-a-Glance",
+        replace: "概要"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "This node is under",
+        replace: "このノードは現在"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Maintenance",
+        replace: "メンテナンス中"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Disk Space Allocated",
+        replace: "割り当て済みディスク容量"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: "Memory Allocated",
+        replace: "割り当て済みメモリ"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Your daemon configuration file.",
+        replace: "Daemon設定ファイルです。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Configuration File",
+        replace: "設定ファイル"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "This file should be placed in your daemon's root directory (usually <code>/etc/pterodactyl</code>) in a file called <code>config.yml</code>.",
+        replace: "このファイルは、daemonのルートディレクトリ（通常は<code>/etc/pterodactyl</code>）に<code>config.yml</code>というファイル名で配置する必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Auto-Deploy",
+        replace: "自動デプロイ"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Use the button below to generate a custom deployment command that can be used to configure",
+        replace: "下のボタンを使用して、ターゲットサーバー上でwingsを単一のコマンドで構成するための"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "wings on the target server with a single command.",
+        replace: "カスタムデプロイコマンドを生成できます。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Generate Token",
+        replace: "トークンを生成"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "Token created.",
+        replace: "トークンが作成されました。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: "To auto-configure your node run the following command:",
+        replace: "ノードを自動構成するには、次のコマンドを実行します:"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Control allocations available for servers on this node.",
+        replace: "このノード上のサーバーで使用可能な割り当てを制御します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        regex: /<li class="active">Allocations<\/li>/,
+        replace: '<li class="active">割り当て</li>'
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Existing Allocations",
+        replace: "既存の割り当て"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "IP Address <i",
+        replace: "IPアドレス <i"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "IP Alias",
+        replace: "IPエイリアス"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Port",
+        replace: "ポート"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Assigned To",
+        replace: "割り当て先"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Mass Actions",
+        replace: "一括操作"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Delete <i",
+        replace: "削除 <i"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Assign New Allocations",
+        replace: "新しい割り当てを追加"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Enter an IP address to assign ports to here.",
+        replace: "ポートを割り当てるIPアドレスをここに入力します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "If you would like to assign a default alias to these allocations enter it here.",
+        replace: "これらの割り当てにデフォルトのエイリアスを割り当てる場合は、ここに入力します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Enter individual ports or port ranges here separated by commas or spaces.",
+        replace: "個別のポートまたはポート範囲を、コンマまたはスペースで区切ってここに入力します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">Submit</button>",
+        replace: ">送信</button>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Delete Allocations for IP Block",
+        replace: "IPブロックの割り当てを削除"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Delete Allocations</button>",
+        replace: "割り当てを削除</button>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Are you sure you want to delete this allocation?",
+        replace: "この割り当てを削除してもよろしいですか？"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Port Deleted!",
+        replace: "ポートが削除されました！"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Whoops!",
+        replace: "おっと！"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Are you sure you want to delete the following allocations:",
+        replace: "次の割り当てを削除してもよろしいですか:"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "Allocations Deleted",
+        replace: "割り当てが削除されました"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: "An error occurred while attempting to delete these allocations. Please try again.",
+        replace: "割り当ての削除中にエラーが発生しました。もう一度お試しください。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: "All servers currently assigned to this node.",
+        replace: "現在このノードに割り当てられているすべてのサーバー。"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: "Server Name",
+        replace: "サーバー名"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: "Service",
+        replace: "サービス"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: ">About</a>",
+        replace: ">概要</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: ">About</a>",
+        replace: ">概要</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: ">About</a>",
+        replace: ">概要</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">About</a>",
+        replace: ">概要</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: ">About</a>",
+        replace: ">概要</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: ">Settings</a>",
+        replace: ">設定</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: ">Settings</a>",
+        replace: ">設定</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: ">Settings</a>",
+        replace: ">設定</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">Settings</a>",
+        replace: ">設定</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: ">Settings</a>",
+        replace: ">設定</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: ">Configuration</a>",
+        replace: ">構成</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: ">Configuration</a>",
+        replace: ">構成</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: ">Configuration</a>",
+        replace: ">構成</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">Configuration</a>",
+        replace: ">構成</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: ">Configuration</a>",
+        replace: ">構成</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: ">Allocation</a>",
+        replace: ">割り当て</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: ">Allocation</a>",
+        replace: ">割り当て</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: ">Allocation</a>",
+        replace: ">割り当て</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">Allocation</a>",
+        replace: ">割り当て</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: ">Allocation</a>",
+        replace: ">割り当て</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/index.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/settings.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/configuration.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/allocation.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/view/servers.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
         file: 'resources/views/admin/nodes/new.blade.php',
         regex: />Create Node<\/button>/,
         replace: ">ノード作成</button>"
