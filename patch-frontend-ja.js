@@ -3345,6 +3345,28 @@ const replacements = [
         search: "'The requested database host has been deleted from the system.'",
         replace: "'データベースホストを削除しました。'"
     },
+    // 設定ページのメッセージ
+    {
+        file: 'app/Http/Controllers/Admin/Settings/IndexController.php',
+        search: "'Panel settings have been updated successfully and the queue worker was restarted to apply these changes.'",
+        replace: "'パネル設定が正常に更新され、変更を適用するためにキューワーカーが再起動されました。'"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/Settings/AdvancedController.php',
+        search: "'Advanced settings have been updated successfully and the queue worker was restarted to apply these changes.'",
+        replace: "'詳細設定が正常に更新され、変更を適用するためにキューワーカーが再起動されました。'"
+    },
+    // マウントメッセージ
+    {
+        file: 'app/Http/Controllers/Admin/ServersController.php',
+        search: "'Mount was added successfully.'",
+        replace: "'マウントを正常に追加しました。'"
+    },
+    {
+        file: 'app/Http/Controllers/Admin/ServersController.php',
+        search: "'Mount was removed successfully.'",
+        replace: "'マウントを正常に削除しました。'"
+    },
 ];
 
 
