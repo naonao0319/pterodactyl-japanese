@@ -655,9 +655,109 @@ const replacements = [
         replace: "ログアウト"
     },
     {
-        file: 'resources/views/layouts/admin.blade.php',
-        search: "There was an error validating the data provided.",
-        replace: "提供されたデータの検証中にエラーが発生しました。"
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "All nests currently available on this system.",
+        replace: "システムで現在利用可能なすべてのネスト。"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Configured Nests",
+        replace: "構成済みのネスト"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Import Egg",
+        replace: "Eggをインポート"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Eggs are a powerful feature of Pterodactyl Panel that allow for extreme flexibility and configuration. Please note that while powerful, modifying an egg wrongly can very easily brick your servers and cause more problems. Please avoid editing our default eggs — those provided by <code>support@pterodactyl.io</code> — unless you are absolutely sure of what you are doing.",
+        replace: "Eggは、極めて高い柔軟性と構成を可能にするPterodactyl Panelの強力な機能です。強力ではありますが、Eggを誤って変更すると、サーバーが破損し、多くの問題が発生する可能性があることに注意してください。自分が何をしているのか完全に確信がない限り、デフォルトのEgg（<code>support@pterodactyl.io</code>によって提供されるもの）を編集することは避けてください。"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Import an Egg",
+        replace: "Eggをインポート"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Egg File",
+        replace: "Eggファイル"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Select the <code>.json</code> file for the new egg that you wish to import.",
+        replace: "インポートしたい新規Eggの <code>.json</code> ファイルを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Associated Nest",
+        replace: "関連ネスト"
+    },
+    {
+        file: 'resources/views/admin/nests/index.blade.php',
+        search: "Select the nest that this egg will be associated with from the dropdown. If you wish to associate it with a new nest you will need to create that nest before continuing.",
+        replace: "このEggに関連付けるネストをドロップダウンから選択してください。新しいネストに関連付ける場合は、続行する前にそのネストを作成する必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nests/new.blade.php',
+        search: "New Nest",
+        replace: "新規ネスト"
+    },
+    {
+        file: 'resources/views/admin/nests/new.blade.php',
+        search: "Configure a new nest to deploy to all nodes.",
+        replace: "すべてのノードにデプロイする新しいネストを構成します。"
+    },
+    {
+        file: 'resources/views/admin/nests/new.blade.php',
+        search: "This should be a descriptive category name that encompasses all of the eggs within the nest.",
+        replace: "これは、ネスト内のすべてのEggを包含する説明的なカテゴリ名である必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "This should be a descriptive category name that encompasses all of the options within the service.",
+        replace: "これは、サービス内のすべてのオプションを包含する説明的なカテゴリ名である必要があります。"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "Nest ID",
+        replace: "ネストID"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "A unique ID used for identification of this nest internally and through the API.",
+        replace: "内部およびAPIを通じてこのネストを一意に識別するために使用されるID。"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "The author of this service option. Please direct questions and issues to them unless this is an official option authored by <code>support@pterodactyl.io</code>.",
+        replace: "このサービスオプションの作成者。これが<code>support@pterodactyl.io</code>によって作成された公式オプションでない限り、質問や問題は作成者に直接お問い合わせください。"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "A UUID that all servers using this option are assigned for identification purposes.",
+        replace: "識別目的でこのオプションを使用するすべてのサーバーに割り当てられるUUID。"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "Nest Eggs",
+        replace: "ネストのEgg"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: "New Egg",
+        replace: "新規Egg"
+    },
+    {
+        file: 'resources/views/admin/nests/view.blade.php',
+        search: " Delete Nest",
+        replace: " ネストを削除"
     },
     {
         file: 'resources/views/admin/nodes/new.blade.php',
@@ -1263,6 +1363,336 @@ const replacements = [
         file: 'resources/views/admin/nodes/new.blade.php',
         regex: />Create Node<\/button>/,
         replace: ">ノード作成</button>"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "All servers currently available on this system.",
+        replace: "システム上で利用可能な全サーバー。"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Server Name",
+        replace: "サーバー名"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Owner",
+        replace: "所有者"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Connection",
+        replace: "接続"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Suspended",
+        replace: "凍結中"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Installing",
+        replace: "インストール中"
+    },
+    {
+        file: 'resources/views/admin/servers/index.blade.php',
+        search: "Install Failed",
+        replace: "インストール失敗"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Create Server",
+        replace: "サーバー作成"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Add a new server to the panel.",
+        replace: "パネルに新しいサーバーを追加します。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Core Details",
+        replace: "基本詳細"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Server Name",
+        replace: "サーバー名"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Server Owner",
+        replace: "サーバー所有者"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Server Description",
+        replace: "サーバー説明"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Start Server when Installed",
+        replace: "インストール完了時にサーバーを起動"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Allocation Management",
+        replace: "割り当て管理"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Default Allocation",
+        replace: "デフォルトの割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Additional Allocation(s)",
+        replace: "追加の割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Application Feature Limits",
+        replace: "アプリケーション機能制限"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Database Limit",
+        replace: "データベース制限"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Allocation Limit",
+        replace: "割り当て制限"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Backup Limit",
+        replace: "バックアップ制限"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Resource Management",
+        replace: "リソース管理"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "CPU Limit",
+        replace: "CPU制限"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "CPU Pinning",
+        replace: "CPUピン留め"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Memory",
+        replace: "メモリ"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Swap",
+        replace: "スワップ"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Disk Space",
+        replace: "ディスク容量"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Block IO Weight",
+        replace: "ブロックIOウェイト"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Enable OOM Killer",
+        replace: "OOM Killerを有効化"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Nest Configuration",
+        replace: "ネスト構成"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Skip Egg Install Script",
+        replace: "Eggインストールスクリプトをスキップ"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Docker Configuration",
+        replace: "Docker構成"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Docker Image",
+        replace: "Dockerイメージ"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Startup Configuration",
+        replace: "スタートアップ構成"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Startup Command",
+        replace: "スタートアップコマンド"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Service Variables",
+        replace: "サービス変数"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">About<",
+        replace: ">概要<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Details<",
+        replace: ">詳細<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Build Configuration<",
+        replace: ">ビルド構成<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Startup<",
+        replace: ">スタートアップ<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Database<",
+        replace: ">データベース<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Mounts<",
+        replace: ">マウント<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Manage<",
+        replace: ">管理<"
+    },
+    {
+        file: 'resources/views/admin/servers/partials/navigation.blade.php',
+        search: ">Delete<",
+        replace: ">削除<"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Build Details",
+        replace: "ビルド詳細"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Resource Management",
+        replace: "リソース管理"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Disk Space Limit",
+        replace: "ディスク容量制限"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Allocated Memory",
+        replace: "割り当てメモリ"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Allocated Swap",
+        replace: "割り当てスワップ"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Block IO Proportion",
+        replace: "ブロックIO比率"
+    },
+    {
+        file: 'resources/views/admin/servers/view/build.blade.php',
+        search: "Update Build Configuration",
+        replace: "ビルド構成を更新"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Additional actions to control this server.",
+        replace: "このサーバーを制御するための追加操作。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Reinstall Server",
+        replace: "サーバー再インストール"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Install Status",
+        replace: "インストールステータス"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Toggle Install Status",
+        replace: "インストールステータス切り替え"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Suspend Server",
+        replace: "サーバー凍結"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Unsuspend Server",
+        replace: "サーバー凍結解除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Transfer Server",
+        replace: "サーバー転送"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Delete this server from the panel.",
+        replace: "パネルからこのサーバーを削除します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Safely Delete Server",
+        replace: "サーバーを安全に削除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Safely Delete This Server",
+        replace: "このサーバーを安全に削除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Force Delete Server",
+        replace: "サーバーを強制削除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Forcibly Delete This Server",
+        replace: "このサーバーを強制削除"
+    },
+    {
+        file: 'resources/views/admin/servers/view/index.blade.php',
+        search: "Install Failed",
+        replace: "インストール失敗"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Toggle インストールステータス",
+        replace: "インストールステータス切り替え"
     },
     // 日付・時刻フォーマットの日本語化
     {
