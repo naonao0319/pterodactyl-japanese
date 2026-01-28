@@ -3023,6 +3023,72 @@ const replacements = [
         search: ">Create Credentials<",
         replace: ">認証情報を作成<"
     },
+    // ノード作成画面の追加翻訳
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: ">Admin</a>",
+        replace: ">管理者</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: ">Nodes</a>",
+        replace: ">ノード</a>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: ">New<",
+        replace: ">新規<"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Character limits: <code>a-zA-Z0-9_.-</code> and <code>[Space]</code> (min 1, max 100 characters).",
+        replace: "文字制限: <code>a-zA-Z0-9_.-</code> および <code>[スペース]</code> (最小1文字、最大100文字)。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "By setting a node to <code>private</code> you will be denying the ability to auto-deploy to this node.",
+        replace: "ノードを<code>非公開</code>に設定すると、このノードへの自動デプロイ機能が使用できなくなります。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Please enter domain name (e.g <code>node.example.com</code>) to be used for connecting to the daemon. An IP address may be used <em>only</em> if you are not using SSL for this node.",
+        replace: "デーモンへの接続に使用するドメイン名（例：<code>node.example.com</code>）を入力してください。IPアドレスは、このノードでSSLを使用していない場合に<em>のみ</em>使用できます。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Your Panel is currently configured to use a secure connection. In order for browsers to connect to your node it <strong>must</strong> use a SSL connection.",
+        replace: "パネルは現在、安全な接続を使用するよう設定されています。ブラウザがノードに接続するには、SSL接続を使用する<strong>必要があります</strong>。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "In most cases you should select to use a SSL connection. If using an IP Address or you do not wish to use SSL at all, select a HTTP connection.",
+        replace: "ほとんどの場合、SSL接続を使用することをお勧めします。IPアドレスを使用する場合や、SSLを使用したくない場合は、HTTP接続を選択してください。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "If you are running the daemon behind a proxy such as Cloudflare, select this to have the daemon skip looking for certificates on boot.",
+        replace: "Cloudflareなどのプロキシ配下でデーモンを実行している場合は、起動時に証明書の検索をスキップするためにこれを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Enter the directory where server files should be stored. <strong>If you use OVH you should check your partition scheme. You may need to use <code>/home/daemon-data</code> to have enough space.</strong>",
+        replace: "サーバーファイルを保存するディレクトリを入力してください。<strong>OVHを使用している場合は、パーティション構成を確認してください。十分な容量を確保するため、<code>/home/daemon-data</code>を使用する必要がある場合があります。</strong>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Enter the total amount of memory available for new servers. If you would like to allow overallocation of memory enter the percentage that you want to allow. To disable checking for overallocation enter <code>-1</code> into the field. Entering <code>0</code> will prevent creating new servers if it would put the node over the limit.",
+        replace: "新規サーバーに割り当て可能な合計メモリ容量を入力してください。メモリのオーバーアロケーションを許可する場合は、許可する割合を入力してください。オーバーアロケーションのチェックを無効にするには<code>-1</code>を入力してください。<code>0</code>を入力すると、ノードが制限を超える場合に新規サーバーの作成を防止します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Enter the total amount of disk space available for new servers. If you would like to allow overallocation of disk space enter the percentage that you want to allow. To disable checking for overallocation enter <code>-1</code> into the field. Entering <code>0</code> will prevent creating new servers if it would put the node over the limit.",
+        replace: "新規サーバーに割り当て可能な合計ディスク容量を入力してください。ディスク容量のオーバーアロケーションを許可する場合は、許可する割合を入力してください。オーバーアロケーションのチェックを無効にするには<code>-1</code>を入力してください。<code>0</code>を入力すると、ノードが制限を超える場合に新規サーバーの作成を防止します。"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "The daemon runs its own SFTP management container and does not use the SSHd process on the main physical server. <Strong>Do not use the same port that you have assigned for your physical server's SSH process.</strong> If you will be running the daemon behind CloudFlare&reg; you should set the daemon port to <code>8443</code> to allow websocket proxying over SSL.",
+        replace: "デーモンは独自のSFTP管理コンテナを実行し、メインの物理サーバー上のSSHdプロセスを使用しません。<strong>物理サーバーのSSHプロセスに割り当てたポートと同じポートを使用しないでください。</strong> CloudFlare&reg;配下でデーモンを実行する場合は、SSL経由のWebSocketプロキシを許可するためにデーモンポートを<code>8443</code>に設定する必要があります。"
+    },
 ];
 
 
