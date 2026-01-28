@@ -3367,6 +3367,271 @@ const replacements = [
         search: "'Mount was removed successfully.'",
         replace: "'マウントを正常に削除しました。'"
     },
+    // サブユーザー権限の翻訳
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Allows the user to connect to the server websocket, giving them access to view console output and realtime server stats.',",
+        replace: "'description' => 'サーバーのWebSocketへの接続を許可し、コンソール出力とリアルタイムのサーバー統計を表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'connect' => 'Allows a user to connect to the websocket instance for a server to stream the console.',",
+        replace: "'connect' => 'サーバーのWebSocketインスタンスに接続し、コンソールをストリーミングできるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s ability to control the power state of a server, or send commands.',",
+        replace: "'description' => 'サーバーの電源状態の制御やコマンド送信を制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'console' => 'Allows a user to send commands to the server instance via the console.',",
+        replace: "'console' => 'コンソールからサーバーにコマンドを送信できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'start' => 'Allows a user to start the server if it is stopped.',",
+        replace: "'start' => '停止中のサーバーを起動できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'stop' => 'Allows a user to stop a server if it is running.',",
+        replace: "'stop' => '実行中のサーバーを停止できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'restart' => 'Allows a user to perform a server restart. This allows them to start the server if it is offline, but not put the server in a completely stopped state.',",
+        replace: "'restart' => 'サーバーの再起動を許可します。オフラインのサーバーを起動できますが、完全に停止状態にすることはできません。',"
+    },
+    // ユーザー権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that allow a user to manage other subusers on a server. They will never be able to edit their own account, or assign permissions they do not have themselves.',",
+        replace: "'description' => 'サーバー上の他のサブユーザーを管理できる権限です。自分のアカウントを編集したり、自分が持っていない権限を割り当てることはできません。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to create new subusers for the server.',",
+        replace: "'create' => 'サーバーに新しいサブユーザーを作成できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows the user to view subusers and their permissions for the server.',",
+        replace: "'read' => 'サブユーザーとその権限を表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to modify other subusers.',",
+        replace: "'update' => '他のサブユーザーを変更できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to delete a subuser from the server.',",
+        replace: "'delete' => 'サーバーからサブユーザーを削除できるようにします。',"
+    },
+    // ファイル権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s ability to modify the filesystem for this server.',",
+        replace: "'description' => 'このサーバーのファイルシステムを変更する能力を制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to create additional files and folders via the Panel or direct upload.',",
+        replace: "'create' => 'パネルまたは直接アップロードで追加のファイルやフォルダを作成できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view the contents of a directory, but not view the contents of or download files.',",
+        replace: "'read' => 'ディレクトリの内容を表示できるようにしますが、ファイルの内容表示やダウンロードはできません。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read-content' => 'Allows a user to view the contents of a given file. This will also allow the user to download files.',",
+        replace: "'read-content' => 'ファイルの内容を表示できるようにします。これによりファイルのダウンロードも可能になります。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to update the contents of an existing file or directory.',",
+        replace: "'update' => '既存のファイルまたはディレクトリの内容を更新できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to delete files or directories.',",
+        replace: "'delete' => 'ファイルまたはディレクトリを削除できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'archive' => 'Allows a user to archive the contents of a directory as well as decompress existing archives on the system.',",
+        replace: "'archive' => 'ディレクトリの内容をアーカイブしたり、既存のアーカイブを解凍できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'sftp' => 'Allows a user to connect to SFTP and manage server files using the other assigned file permissions.',",
+        replace: "'sftp' => 'SFTPに接続し、他の割り当てられたファイル権限を使用してサーバーファイルを管理できるようにします。',"
+    },
+    // バックアップ権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s ability to generate and manage server backups.',",
+        replace: "'description' => 'サーバーバックアップの生成と管理を制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to create new backups for this server.',",
+        replace: "'create' => 'このサーバーの新しいバックアップを作成できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view all backups that exist for this server.',",
+        replace: "'read' => 'このサーバーに存在するすべてのバックアップを表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to remove backups from the system.',",
+        replace: "'delete' => 'システムからバックアップを削除できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'download' => 'Allows a user to download a backup for the server. Danger: this allows a user to access all files for the server in the backup.',",
+        replace: "'download' => 'サーバーのバックアップをダウンロードできるようにします。警告: バックアップ内のすべてのファイルにアクセスできるようになります。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'restore' => 'Allows a user to restore a backup for the server. Danger: this allows the user to delete all of the server files in the process.',",
+        replace: "'restore' => 'サーバーのバックアップを復元できるようにします。警告: 復元中にサーバーのすべてのファイルが削除される可能性があります。',"
+    },
+    // 割り当て権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s ability to modify the port allocations for this server.',",
+        replace: "'description' => 'このサーバーのポート割り当てを変更する能力を制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view all allocations currently assigned to this server. Users with any level of access to this server can always view the primary allocation.',",
+        replace: "'read' => 'このサーバーに割り当てられているすべての割り当てを表示できるようにします。プライマリ割り当ては常に表示されます。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to assign additional allocations to the server.',",
+        replace: "'create' => 'サーバーに追加の割り当てを割り当てることができるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to change the primary server allocation and attach notes to each allocation.',",
+        replace: "'update' => 'プライマリサーバー割り当てを変更し、各割り当てにメモを付けることができるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to delete an allocation from the server.',",
+        replace: "'delete' => 'サーバーから割り当てを削除できるようにします。',"
+    },
+    // スタートアップ権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s ability to view this server\\'s startup parameters.',",
+        replace: "'description' => 'このサーバーのスタートアップパラメータを表示する能力を制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view the startup variables for a server.',",
+        replace: "'read' => 'サーバーのスタートアップ変数を表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to modify the startup variables for the server.',",
+        replace: "'update' => 'サーバーのスタートアップ変数を変更できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'docker-image' => 'Allows a user to modify the Docker image used when running the server.',",
+        replace: "'docker-image' => 'サーバー実行時に使用するDockerイメージを変更できるようにします。',"
+    },
+    // データベース権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s access to the database management for this server.',",
+        replace: "'description' => 'このサーバーのデータベース管理へのアクセスを制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to create a new database for this server.',",
+        replace: "'create' => 'このサーバーに新しいデータベースを作成できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view the database associated with this server.',",
+        replace: "'read' => 'このサーバーに関連するデータベースを表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to rotate the password on a database instance. If the user does not have the view_password permission they will not see the updated password.',",
+        replace: "'update' => 'データベースインスタンスのパスワードをローテーションできるようにします。view_password権限がない場合、更新されたパスワードは表示されません。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to remove a database instance from this server.',",
+        replace: "'delete' => 'このサーバーからデータベースインスタンスを削除できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'view_password' => 'Allows a user to view the password associated with a database instance for this server.',",
+        replace: "'view_password' => 'このサーバーのデータベースインスタンスに関連するパスワードを表示できるようにします。',"
+    },
+    // スケジュール権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s access to the schedule management for this server.',",
+        replace: "'description' => 'このサーバーのスケジュール管理へのアクセスを制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'create' => 'Allows a user to create new schedules for this server.',",
+        replace: "'create' => 'このサーバーに新しいスケジュールを作成できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view schedules and the tasks associated with them for this server.',",
+        replace: "'read' => 'このサーバーのスケジュールと関連タスクを表示できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'update' => 'Allows a user to update schedules and schedule tasks for this server.',",
+        replace: "'update' => 'このサーバーのスケジュールとスケジュールタスクを更新できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'delete' => 'Allows a user to delete schedules for this server.',",
+        replace: "'delete' => 'このサーバーのスケジュールを削除できるようにします。',"
+    },
+    // 設定権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s access to the settings for this server.',",
+        replace: "'description' => 'このサーバーの設定へのアクセスを制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'rename' => 'Allows a user to rename this server and change the description of it.',",
+        replace: "'rename' => 'このサーバーの名前を変更し、説明を変更できるようにします。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'reinstall' => 'Allows a user to trigger a reinstall of this server.',",
+        replace: "'reinstall' => 'このサーバーの再インストールを実行できるようにします。',"
+    },
+    // アクティビティ権限
+    {
+        file: 'app/Models/Permission.php',
+        search: "'description' => 'Permissions that control a user\\'s access to the server activity logs.',",
+        replace: "'description' => 'サーバーのアクティビティログへのアクセスを制御する権限です。',"
+    },
+    {
+        file: 'app/Models/Permission.php',
+        search: "'read' => 'Allows a user to view the activity logs for the server.',",
+        replace: "'read' => 'サーバーのアクティビティログを表示できるようにします。',"
+    },
 ];
 
 
