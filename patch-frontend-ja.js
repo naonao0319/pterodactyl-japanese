@@ -2249,6 +2249,103 @@ const replacements = [
         search: "Status",
         replace: "ステータス"
     },
+    // Server View - Manage
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "This will reinstall the server with the assigned service scripts. <strong>Danger!</strong> This could overwrite server data.",
+        replace: "割り当てられたサービススクリプトを使用してサーバーを再インストールします。<strong>危険！</strong> これによりサーバーデータが上書きされる可能性があります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Server Must Install Properly to Reinstall",
+        replace: "再インストールするにはサーバーが正常にインストールされている必要があります"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "If you need to change the install status from uninstalled to installed, or vice versa, you may do so with the button below.",
+        replace: "インストールステータスを「未インストール」から「インストール済み」に、またはその逆に変更する必要がある場合は、下のボタンで行うことができます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "This will suspend the server, stop any running processes, and immediately block the user from being able to access their files or otherwise manage the server through the panel or API.",
+        replace: "これにより、サーバーが凍結され、実行中のプロセスが停止し、ユーザーがファイルを操作したり、パネルやAPIを通じてサーバーを管理したりすることが即座にブロックされます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "This will unsuspend the server and restore normal user access.",
+        replace: "これにより、サーバーの凍結が解除され、通常のユーザーアクセスが復元されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Transfer this server to another node connected to this panel.",
+        replace: "このパネルに接続されている別のノードにこのサーバーを転送します。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "<strong>Warning!</strong> This feature has not been fully tested and may have bugs.",
+        replace: "<strong>警告！</strong> この機能は完全にはテストされておらず、バグがある可能性があります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Transferring a server requires more than one node to be configured on your panel.",
+        replace: "サーバーを転送するには、パネルで複数のノードが構成されている必要があります。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "This server is currently being transferred to another node.",
+        replace: "このサーバーは現在、別のノードへ転送中です。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Transfer was initiated at <strong>{{ $server->transfer->created_at }}</strong>",
+        replace: "転送開始日時：<strong>{{ $server->transfer->created_at }}</strong>"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "The node which this server will be transferred to.",
+        replace: "このサーバーの転送先ノード。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Default Allocation",
+        replace: "デフォルト割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "The main allocation that will be assigned to this server.",
+        replace: "このサーバーに割り当てられるメインの割り当て。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Additional Allocation(s)",
+        replace: "追加の割り当て"
+    },
+    {
+        file: 'resources/views/admin/servers/view/manage.blade.php',
+        search: "Additional allocations to assign to this server on creation.",
+        replace: "作成時にこのサーバーに割り当てる追加の割り当て。"
+    },
+    // Server View - Delete
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "This action will attempt to delete the server from both the panel and daemon. If either one reports an error the action will be cancelled.",
+        replace: "この操作により、パネルとデーモンの両方からサーバーの削除が試みられます。どちらか一方でもエラーが発生した場合、操作はキャンセルされます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "Deleting a server is an irreversible action. <strong>All server data</strong> (including files and users) will be removed from the system.",
+        replace: "サーバーの削除は取り消しができません。<strong>すべてのサーバーデータ</strong>（ファイルやユーザーを含む）がシステムから削除されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "This action will attempt to delete the server from both the panel and daemon. If the daemon does not respond, or reports an error the deletion will continue.",
+        replace: "この操作により、パネルとデーモンの両方からサーバーの削除が試みられます。デーモンが応答しない場合やエラーが発生した場合でも、削除は続行されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/view/delete.blade.php',
+        search: "This method may leave dangling files on your daemon if it reports an error.",
+        replace: "エラーが発生した場合、この方法ではデーモン上にファイルが残る可能性があります。"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
