@@ -460,11 +460,6 @@ const replacements = [
     },
     {
         file: 'resources/views/admin/servers/index.blade.php',
-        regex: />\s*Search Servers\s*</, // In placeholder
-        replace: ">サーバー検索<" // This might fail if it's an attribute
-    },
-    {
-        file: 'resources/views/admin/servers/index.blade.php',
         search: 'placeholder="Search Servers"',
         replace: 'placeholder="サーバー検索"'
     },
@@ -502,6 +497,127 @@ const replacements = [
         file: 'resources/views/admin/servers/index.blade.php',
         regex: />Active<\/span>/,
         replace: ">稼働中</span>"
+    },
+    // Admin Panel - New Node (resources/views/admin/nodes/new.blade.php)
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Nodes &rarr; New",
+        replace: "ノード &rarr; 新規作成"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "New Node<small>Create a new local or remote node for servers to be installed to.</small>",
+        replace: "新規ノード<small>サーバーをインストールするための新しいローカルまたはリモートノードを作成します。</small>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Basic Details",
+        replace: "基本詳細"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: 'label for="pName" class="form-label">Name</label>',
+        replace: 'label for="pName" class="form-label">名前</label>'
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: 'label for="pDescription" class="form-label">Description</label>',
+        replace: 'label for="pDescription" class="form-label">説明</label>'
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: 'label for="pLocationId" class="form-label">Location</label>',
+        replace: 'label for="pLocationId" class="form-label">ロケーション</label>'
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Node Visibility",
+        replace: "ノードの公開設定"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Public </label>",
+        replace: "公開 </label>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Private </label>",
+        replace: "非公開 </label>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Communicate Over SSL",
+        replace: "SSL通信"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Use SSL Connection</label>",
+        replace: "SSL接続を使用</label>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Use HTTP Connection</label>",
+        replace: "HTTP接続を使用</label>"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Behind Proxy",
+        replace: "プロキシ配下"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Not プロキシ配下",
+        replace: "プロキシ配下ではない"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        regex: /Label for="pProxyTrue">\s*Behind Proxy\s*<\/label>/,
+        replace: 'label for="pProxyTrue"> プロキシ配下 </label>'
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Configuration",
+        replace: "設定"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Daemon Server File Directory",
+        replace: "Daemon サーバーファイルディレクトリ"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Total Memory",
+        replace: "合計メモリ"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Memory Over-Allocation",
+        replace: "メモリのオーバーアロケーション"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Total Disk Space",
+        replace: "合計ディスク容量"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Disk Over-Allocation",
+        replace: "ディスクのオーバーアロケーション"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Daemon Port",
+        replace: "Daemon ポート"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        search: "Daemon SFTP Port",
+        replace: "Daemon SFTP ポート"
+    },
+    {
+        file: 'resources/views/admin/nodes/new.blade.php',
+        regex: />Create Node<\/button>/,
+        replace: ">ノード作成</button>"
     },
     // 日付・時刻フォーマットの日本語化
     {
