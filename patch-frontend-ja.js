@@ -1864,6 +1864,66 @@ const replacements = [
         search: "There must be no servers associated with this account in order for it to be deleted.",
         replace: "このアカウントを削除するには、アカウントに関連付けられているサーバーがない必要があります。"
     },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "All locations that nodes can be assigned to for easier categorization.",
+        replace: "ノードを分類しやすくするために割り当てることができるすべてのロケーション。"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "Location List",
+        replace: "ロケーション一覧"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "Short Code",
+        replace: "ショートコード"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "Description",
+        replace: "説明"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "Create Location",
+        replace: "ロケーション作成"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "A short identifier used to distinguish this location from others. Must be between 1 and 60 characters, for example, <code>us.nyc.lvl3</code>.",
+        replace: "他のロケーションと区別するための短い識別子です。1〜60文字である必要があります。例：<code>us.nyc.lvl3</code>。"
+    },
+    {
+        file: 'resources/views/admin/locations/index.blade.php',
+        search: "A longer description of this location. Must be less than 191 characters.",
+        replace: "このロケーションの詳細な説明。191文字以下である必要があります。"
+    },
+    {
+        file: 'resources/views/admin/locations/view.blade.php',
+        search: "Location Details",
+        replace: "ロケーション詳細"
+    },
+    {
+        file: 'resources/views/admin/locations/view.blade.php',
+        search: "Short Code",
+        replace: "ショートコード"
+    },
+    {
+        file: 'resources/views/admin/locations/view.blade.php',
+        search: "Description",
+        replace: "説明"
+    },
+    {
+        file: 'resources/views/admin/locations/view.blade.php',
+        search: "Servers",
+        replace: "サーバー"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
