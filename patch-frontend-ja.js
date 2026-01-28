@@ -23,8 +23,8 @@ const replacements = [
     },
     {
         file: 'resources/scripts/components/auth/LoginContainer.tsx',
-        search: "Login",
-        replace: "ログイン"
+        regex: />\s*Login\s*</,
+        replace: ">ログイン<"
     },
     {
         file: 'resources/scripts/components/auth/LoginContainer.tsx',

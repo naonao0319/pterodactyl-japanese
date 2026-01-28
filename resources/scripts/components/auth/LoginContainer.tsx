@@ -80,9 +80,7 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                         <Field light type={'password'} label={'パスワード'} name={'password'} disabled={isSubmitting} />
                     </div>
                     <div css={tw`mt-6`}>
-                        <Button type={'submit'} size={'xlarge'} isLoading={isSubmitting} disabled={isSubmitting}>
-                            Login
-                        </Button>
+                        <Button type={'submit'} size={'xlarge'} isLoading={isSubmitting} disabled={isSubmitting}>ログイン</Button>
                     </div>
                     {recaptchaEnabled && (
                         <Reaptcha
