@@ -247,6 +247,48 @@ const replacements = [
         regex: /<span className=\{['"]font-semibold text-gray-50['"]\}>\{file\.name\}<\/span> once deleted\./,
         replace: "<span className={'font-semibold text-gray-50'}>{file.name}</span>"
     },
+    // スタートアップ画面
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        search: "title={'Startup Settings'}",
+        replace: "title={'スタートアップ設定'}"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        search: "title={'Startup Command'}",
+        replace: "title={'起動コマンド'}"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        search: "title={'Docker Image'}",
+        replace: "title={'Docker イメージ'}"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        regex: /<h3 css=\{tw`mt-8 mb-2 text-2xl`\}>Variables<\/h3>/,
+        replace: "<h3 css={tw`mt-8 mb-2 text-2xl`}>変数</h3>"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        search: "This is an advanced feature allowing you to select a Docker image to use when running",
+        replace: "これは高度な機能であり、このサーバーインスタンスを実行する際に使用する Docker イメージを選択できます。"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        search: "this server instance.",
+        replace: ""
+    },
+    {
+        file: 'resources/scripts/components/server/startup/StartupContainer.tsx',
+        regex: /This \{"server's"\} Docker image has been manually set by an administrator and cannot\s+be changed through this UI\./,
+        replace: "このサーバーの Docker イメージは管理者によって手動で設定されているため、この UI から変更することはできません。"
+    },
+    {
+        file: 'resources/scripts/components/server/startup/VariableBox.tsx',
+        search: ">Read Only<",
+        replace: ">読取専用<"
+    },
+    // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
         regex: /format\(\s*file\.modifiedAt,\s*['"]MMM do, yyyy h:mma['"]\s*\)/,
