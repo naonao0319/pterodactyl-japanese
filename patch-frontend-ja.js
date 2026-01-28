@@ -3163,7 +3163,7 @@ const replacements = [
     {
         file: 'resources/views/admin/servers/new.blade.php',
         search: "<strong>Advanced:</strong> Enter the specific CPU threads that this process can run on, or leave blank to allow all threads. This can be a single number, or a comma separated list. Example: <code>0</code>, <code>0-1,3</code>, or <code>0,1,3,4</code>.",
-        replace: "<strong>上級設定:</strong> このプロセスを実行できる特定のCPUスレッドを入力するか、すべてのスレッドを許可するには空白のままにします。単一の数値またはカンマ区切りのリストを指定できます。例: <code>0</code>、<code>0-1,3</code>、または<code>0,1,3,4</code>。"
+        replace: "<strong>advanced設定:</strong> このプロセスを実行できる特定のCPUスレッドを入力するか、すべてのスレッドを許可するには空白のままにします。単一の数値またはカンマ区切りのリストを指定できます。例: <code>0</code>、<code>0-1,3</code>、または<code>0,1,3,4</code>。"
     },
     {
         file: 'resources/views/admin/servers/new.blade.php',
@@ -3183,7 +3183,7 @@ const replacements = [
     {
         file: 'resources/views/admin/servers/new.blade.php',
         search: "<strong>Advanced</strong>: The IO performance of this server relative to other <em>running</em> containers on the system. Value should be between <code>10</code> and <code>1000</code>. Please see <a href=\"https://docs.docker.com/engine/reference/run/#block-io-bandwidth-blkio-constraint\" target=\"_blank\">this documentation</a> for more information about it.",
-        replace: "<strong>上級設定</strong>: システム上で<em>稼働中</em>の他のコンテナと比較したこのサーバーのIO性能。値は<code>10</code>から<code>1000</code>の間で設定してください。詳細については<a href=\"https://docs.docker.com/engine/reference/run/#block-io-bandwidth-blkio-constraint\" target=\"_blank\">こちらのドキュメント</a>をご覧ください。"
+        replace: "<strong>advanced設定</strong>: システム上で<em>稼働中</em>の他のコンテナと比較したこのサーバーのIO性能。値は<code>10</code>から<code>1000</code>の間で設定してください。詳細については<a href=\"https://docs.docker.com/engine/reference/run/#block-io-bandwidth-blkio-constraint\" target=\"_blank\">こちらのドキュメント</a>をご覧ください。"
     },
     {
         file: 'resources/views/admin/servers/new.blade.php',
@@ -3229,6 +3229,74 @@ const replacements = [
         file: 'resources/views/admin/servers/new.blade.php',
         search: "The following data substitutes are available for the startup command: <code>@{{SERVER_MEMORY}}</code>, <code>@{{SERVER_IP}}</code>, and <code>@{{SERVER_PORT}}</code>. They will be replaced with the allocated memory, server IP, and server port respectively.",
         replace: "スタートアップコマンドで使用可能な変数: <code>@{{SERVER_MEMORY}}</code>、<code>@{{SERVER_IP}}</code>、<code>@{{SERVER_PORT}}</code>。それぞれ割り当てられたメモリ、サーバーIP、サーバーポートに置換されます。"
+    },
+    // アカウント設定ページの翻訳
+    {
+        file: 'resources/scripts/components/dashboard/AccountOverviewContainer.tsx',
+        search: "title={'Update Password'}",
+        replace: "title={'パスワードを更新'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/AccountOverviewContainer.tsx',
+        search: "title={'Update Email Address'}",
+        replace: "title={'メールアドレスを更新'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/AccountOverviewContainer.tsx',
+        search: "title={'Two-Step Verification'}",
+        replace: "title={'2段階認証'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/forms/UpdatePasswordForm.tsx',
+        search: ">Update Password</Button>",
+        replace: ">パスワードを更新</Button>"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/forms/DisableTOTPDialog.tsx',
+        search: "title: 'Disable Two-Step Verification'",
+        replace: "title: '2段階認証を無効化'"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/forms/SetupTOTPDialog.tsx',
+        search: "title: 'Enable Two-Step Verification'",
+        replace: "title: '2段階認証を有効化'"
+    },
+    // API Keys ページ
+    {
+        file: 'resources/scripts/components/dashboard/AccountApiContainer.tsx',
+        search: "title={'Create API Key'}",
+        replace: "title={'APIキーを作成'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/AccountApiContainer.tsx',
+        search: "title={'API Keys'}",
+        replace: "title={'APIキー'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/AccountApiContainer.tsx',
+        search: "Last used:&nbsp;",
+        replace: "最終使用日:&nbsp;"
+    },
+    // SSH Keys ページ
+    {
+        file: 'resources/scripts/components/dashboard/ssh/AccountSSHContainer.tsx',
+        search: "title={'Add SSH Key'}",
+        replace: "title={'SSHキーを追加'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/ssh/AccountSSHContainer.tsx',
+        regex: /title=\{'SSH Keys'\}/g,
+        replace: "title={'SSHキー'}"
+    },
+    {
+        file: 'resources/scripts/components/dashboard/ssh/AccountSSHContainer.tsx',
+        search: "'No SSH Keys exist for this account.'",
+        replace: "'このアカウントにSSHキーは存在しません。'"
+    },
+    {
+        file: 'resources/scripts/routers/routes.ts',
+        search: "name: 'SSH Keys'",
+        replace: "name: 'SSHキー'"
     },
 ];
 
