@@ -3089,6 +3089,147 @@ const replacements = [
         search: "The daemon runs its own SFTP management container and does not use the SSHd process on the main physical server. <Strong>Do not use the same port that you have assigned for your physical server's SSH process.</strong> If you will be running the daemon behind CloudFlare&reg; you should set the daemon port to <code>8443</code> to allow websocket proxying over SSL.",
         replace: "デーモンは独自のSFTP管理コンテナを実行し、メインの物理サーバー上のSSHdプロセスを使用しません。<strong>物理サーバーのSSHプロセスに割り当てたポートと同じポートを使用しないでください。</strong> CloudFlare&reg;配下でデーモンを実行する場合は、SSL経由のWebSocketプロキシを許可するためにデーモンポートを<code>8443</code>に設定する必要があります。"
     },
+    // サーバー作成画面の翻訳
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">New Server<",
+        replace: ">新規サーバー<"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">Admin</a>",
+        replace: ">管理者</a>"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">Servers</a>",
+        replace: ">サーバー</a>"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Character limits: <code>a-z A-Z 0-9 _ - .</code> and <code>[Space]</code>.",
+        replace: "文字制限: <code>a-z A-Z 0-9 _ - .</code> および <code>[スペース]</code>。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Email address of the サーバー所有者.",
+        replace: "サーバー所有者のメールアドレス。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "A brief description of this server.",
+        replace: "サーバーの簡単な説明。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">Node<",
+        replace: ">ノード<"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The node which this server will be deployed to.",
+        replace: "サーバーがデプロイされるノード。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The main allocation that will be assigned to this server.",
+        replace: "サーバーに割り当てられるメインのアロケーション。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Additional allocations to assign to this server on creation.",
+        replace: "作成時にサーバーに割り当てる追加のアロケーション。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The total number of databases a user is allowed to create for this server.",
+        replace: "ユーザーがこのサーバーに作成できるデータベースの最大数。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The total number of allocations a user is allowed to create for this server.",
+        replace: "ユーザーがこのサーバーに作成できるアロケーションの最大数。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The total number of backups that can be created for this server.",
+        replace: "このサーバーで作成可能なバックアップの最大数。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "If you do not want to limit CPU usage, set the value to <code>0</code>. To determine a value, take the number of threads and multiply it by 100. For example, on a quad core system without hyperthreading <code>(4 * 100 = 400)</code> there is <code>400%</code> available. To limit a server to using half of a single thread, you would set the value to <code>50</code>. To allow a server to use up to two threads, set the value to <code>200</code>.",
+        replace: "CPU使用率を制限しない場合は、<code>0</code>に設定してください。値を決定するには、スレッド数に100を掛けます。例えば、ハイパースレッディングなしの4コアシステム<code>(4 * 100 = 400)</code>では<code>400%</code>が利用可能です。サーバーを1つのスレッドの半分に制限するには<code>50</code>に設定します。サーバーが最大2つのスレッドを使用できるようにするには<code>200</code>に設定します。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "<strong>Advanced:</strong> Enter the specific CPU threads that this process can run on, or leave blank to allow all threads. This can be a single number, or a comma separated list. Example: <code>0</code>, <code>0-1,3</code>, or <code>0,1,3,4</code>.",
+        replace: "<strong>上級設定:</strong> このプロセスを実行できる特定のCPUスレッドを入力するか、すべてのスレッドを許可するには空白のままにします。単一の数値またはカンマ区切りのリストを指定できます。例: <code>0</code>、<code>0-1,3</code>、または<code>0,1,3,4</code>。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The maximum amount of memory allowed for this container. Setting this to <code>0</code> will allow unlimited memory in a container.",
+        replace: "このコンテナに許可される最大メモリ量。<code>0</code>に設定すると、コンテナで無制限のメモリが許可されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Setting this to <code>0</code> will disable swap space on this server. Setting to <code>-1</code> will allow unlimited swap.",
+        replace: "<code>0</code>に設定すると、このサーバーのスワップ領域が無効になります。<code>-1</code>に設定すると、無制限のスワップが許可されます。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "This server will not be allowed to boot if it is using more than this amount of space. If a server goes over this limit while running it will be safely stopped and locked until enough space is available. Set to <code>0</code> to allow unlimited disk usage.",
+        replace: "この容量を超えて使用している場合、サーバーの起動は許可されません。実行中にサーバーがこの制限を超えた場合、安全に停止され、十分な空き容量が確保されるまでロックされます。無制限のディスク使用を許可するには<code>0</code>に設定してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "<strong>Advanced</strong>: The IO performance of this server relative to other <em>running</em> containers on the system. Value should be between <code>10</code> and <code>1000</code>. Please see <a href=\"https://docs.docker.com/engine/reference/run/#block-io-bandwidth-blkio-constraint\" target=\"_blank\">this documentation</a> for more information about it.",
+        replace: "<strong>上級設定</strong>: システム上で<em>稼働中</em>の他のコンテナと比較したこのサーバーのIO性能。値は<code>10</code>から<code>1000</code>の間で設定してください。詳細については<a href=\"https://docs.docker.com/engine/reference/run/#block-io-bandwidth-blkio-constraint\" target=\"_blank\">こちらのドキュメント</a>をご覧ください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Terminates the server if it breaches the memory limits. Enabling OOM killer may cause server processes to exit unexpectedly.",
+        replace: "メモリ制限を超えた場合にサーバーを終了します。OOM Killerを有効にすると、サーバープロセスが予期せず終了する可能性があります。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">Nest<",
+        replace: ">ネスト<"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Select the Nest that this server will be grouped under.",
+        replace: "サーバーがグループ化されるネストを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: ">Egg<",
+        replace: ">エッグ<"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Select the Egg that will define how this server should operate.",
+        replace: "サーバーの動作方法を定義するエッグを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "If the selected Egg has an install script attached to it, the script will run during the install. If you would like to skip this step, check this box.",
+        replace: "選択したエッグにインストールスクリプトが付属している場合、インストール中にスクリプトが実行されます。この手順をスキップしたい場合は、このボックスにチェックを入れてください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "Or enter a custom image...",
+        replace: "またはカスタムイメージを入力..."
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "This is the default Docker image that will be used to run this server. Select an image from the dropdown above, or enter a custom image in the text field above.",
+        replace: "サーバーの実行に使用されるデフォルトのDockerイメージです。上のドロップダウンからイメージを選択するか、テキストフィールドにカスタムイメージを入力してください。"
+    },
+    {
+        file: 'resources/views/admin/servers/new.blade.php',
+        search: "The following data substitutes are available for the startup command: <code>@{{SERVER_MEMORY}}</code>, <code>@{{SERVER_IP}}</code>, and <code>@{{SERVER_PORT}}</code>. They will be replaced with the allocated memory, server IP, and server port respectively.",
+        replace: "スタートアップコマンドで使用可能な変数: <code>@{{SERVER_MEMORY}}</code>、<code>@{{SERVER_IP}}</code>、<code>@{{SERVER_PORT}}</code>。それぞれ割り当てられたメモリ、サーバーIP、サーバーポートに置換されます。"
+    },
 ];
 
 
