@@ -186,7 +186,79 @@ const replacements = [
         regex: />\s*Delete\s*</,
         replace: ">削除<"
     },
+    // 日付・時刻フォーマットの日本語化
+    {
+        file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
+        regex: /from 'date-fns';/,
+        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
+        regex: /format\(file\.modifiedAt, 'MMM do, yyyy h:mma'\)/,
+        replace: "format(file.modifiedAt, 'yyyy年M月d日 H:mm', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
+        regex: /formatDistanceToNow\(file\.modifiedAt, \{ addSuffix: true \}\)/,
+        replace: "formatDistanceToNow(file.modifiedAt, { addSuffix: true, locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupRow.tsx',
+        regex: /from 'date-fns';/,
+        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupRow.tsx',
+        regex: /format\(backup\.createdAt, 'ddd, MMMM do, yyyy HH:mm:ss'\)/,
+        replace: "format(backup.createdAt, 'yyyy年M月d日 HH:mm:ss', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/backups/BackupRow.tsx',
+        regex: /formatDistanceToNow\(backup\.createdAt, \{ includeSeconds: true, addSuffix: true \}\)/,
+        replace: "formatDistanceToNow(backup.createdAt, { includeSeconds: true, addSuffix: true, locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/schedules/ScheduleRow.tsx',
+        regex: /from 'date-fns';/,
+        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+    },
+    {
+        file: 'resources/scripts/components/server/schedules/ScheduleRow.tsx',
+        regex: /format\(schedule\.lastRunAt, "MMM do 'at' h:mma"\)/,
+        replace: "format(schedule.lastRunAt, 'M月d日 H:mm', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/schedules/ScheduleEditContainer.tsx',
+        regex: /from 'date-fns';/,
+        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+    },
+    {
+        file: 'resources/scripts/components/server/schedules/ScheduleEditContainer.tsx',
+        regex: /format\(schedule\.lastRunAt, "MMM do 'at' h:mma"\)/,
+        replace: "format(schedule.lastRunAt, 'M月d日 H:mm', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/server/schedules/ScheduleEditContainer.tsx',
+        regex: /format\(schedule\.nextRunAt, "MMM do 'at' h:mma"\)/,
+        replace: "format(schedule.nextRunAt, 'M月d日 H:mm', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/elements/activity/ActivityLogEntry.tsx',
+        regex: /from 'date-fns';/,
+        replace: "from 'date-fns';\nimport { ja } from 'date-fns/locale';"
+    },
+    {
+        file: 'resources/scripts/components/elements/activity/ActivityLogEntry.tsx',
+        regex: /format\(activity\.timestamp, 'MMM do, yyyy H:mm:ss'\)/,
+        replace: "format(activity.timestamp, 'yyyy年M月d日 H:mm:ss', { locale: ja })"
+    },
+    {
+        file: 'resources/scripts/components/elements/activity/ActivityLogEntry.tsx',
+        regex: /formatDistanceToNowStrict\(activity\.timestamp, \{ addSuffix: true \}\)/,
+        replace: "formatDistanceToNowStrict(activity.timestamp, { addSuffix: true, locale: ja })"
+    },
 ];
+
 
 console.log('Applying Japanese patch to frontend source code...');
 
