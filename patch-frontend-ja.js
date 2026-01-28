@@ -2497,6 +2497,344 @@ const replacements = [
         search: "None",
         replace: "なし"
     },
+    // Mounts
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Configure and manage additional mount points for servers.",
+        replace: "サーバーの追加マウントポイントを作成・管理します。"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Mount List",
+        replace: "マウント一覧"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Create New",
+        replace: "新規作成"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Source",
+        replace: "ソース"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Target",
+        replace: "ターゲット"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Create Mount",
+        replace: "マウント作成"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Unique name used to separate this mount from another.",
+        replace: "このマウントを他と区別するためのユニークな名前。"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "A longer description for this mount, must be less than 191 characters.",
+        replace: "このマウントの詳細な説明。191文字以内で入力してください。"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "File path on the host system to mount to a container.",
+        replace: "コンテナにマウントするホストシステム上のファイルパス。"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Where the mount will be accessible inside a container.",
+        replace: "コンテナ内でマウントにアクセスできる場所。"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Read Only",
+        replace: "読み取り専用"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Is the mount read only inside the container?",
+        replace: "コンテナ内でこのマウントを読み取り専用にしますか？"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "User Mountable",
+        replace: "ユーザーマウント可能"
+    },
+    {
+        file: 'resources/views/admin/mounts/index.blade.php',
+        search: "Should users be able to mount this themselves?",
+        replace: "ユーザー自身でこのマウントを行えるようにしますか？"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Mount Details",
+        replace: "マウント詳細"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Unique ID",
+        replace: "ユニークID"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Add Eggs",
+        replace: "Eggを追加"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Select eggs..",
+        replace: "Eggを選択.."
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Add Nodes",
+        replace: "ノードを追加"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Select nodes..",
+        replace: "ノードを選択.."
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Egg detached.",
+        replace: "Eggを解除しました。"
+    },
+    {
+        file: 'resources/views/admin/mounts/view.blade.php',
+        search: "Node detached.",
+        replace: "ノードを解除しました。"
+    },
+    // Settings
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "This is the name that is used throughout the panel and in emails sent to clients.",
+        replace: "この名前はパネル全体やクライアントへのメールで使用されます。"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "If enabled, any account falling into the selected grouping will be required to have 2-Factor authentication enabled to use the Panel.",
+        replace: "有効にした場合、選択されたグループに属するすべてのアカウントは、パネルを使用するために二要素認証を有効にする必要があります。"
+    },
+    {
+        file: 'resources/views/admin/settings/index.blade.php',
+        search: "The default language to use when rendering UI components.",
+        replace: "UIコンポーネントを描画する際に使用するデフォルト言語。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Advanced Settings",
+        replace: "詳細設定"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Configure advanced settings for Pterodactyl.",
+        replace: "Pterodactylの詳細設定を行います。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "If enabled, login forms and password reset forms will do a silent captcha check and display a visible captcha if needed.",
+        replace: "有効にすると、ログインフォームとパスワードリセットフォームでサイレントCaptchaチェックが行われ、必要に応じて可視Captchaが表示されます。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Used for communication between your site and Google. Be sure to keep it a secret.",
+        replace: "サイトとGoogle間の通信に使用されます。秘密にしてください。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "HTTP Connections",
+        replace: "HTTP接続"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Connection Timeout",
+        replace: "接続タイムアウト"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Request Timeout",
+        replace: "リクエストタイムアウト"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "The amount of time in seconds to wait for a connection to be opened before throwing an error.",
+        replace: "エラーを投げる前に接続が開かれるのを待つ秒数。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "The amount of time in seconds to wait for a request to be completed before throwing an error.",
+        replace: "エラーを投げる前にリクエストが完了するのを待つ秒数。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Automatic Allocation Creation",
+        replace: "自動割り当て作成"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Starting Port",
+        replace: "開始ポート"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Ending Port",
+        replace: "終了ポート"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "If enabled users will have the option to automatically create new allocations for their server via the frontend.",
+        replace: "有効にすると、ユーザーはフロントエンドからサーバーの新しい割り当てを自動作成できるようになります。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "The starting port in the range that can be automatically allocated.",
+        replace: "自動割り当て可能なポート範囲の開始ポート。"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "The ending port in the range that can be automatically allocated.",
+        replace: "自動割り当て可能なポート範囲の終了ポート。"
+    },
+    // Duplicates for Advanced Settings (Status, Enabled, Disabled)
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Status",
+        replace: "ステータス"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Status",
+        replace: "ステータス"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Enabled",
+        replace: "有効"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Enabled",
+        replace: "有効"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Disabled",
+        replace: "無効"
+    },
+    {
+        file: 'resources/views/admin/settings/advanced.blade.php',
+        search: "Disabled",
+        replace: "無効"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Mail Settings",
+        replace: "メール設定"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Configure how Pterodactyl should handle sending emails.",
+        replace: "Pterodactylのメール送信方法を設定します。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Email Settings",
+        replace: "メール設定"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "SMTP Host",
+        replace: "SMTPホスト"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Enter the SMTP server address that mail should be sent through.",
+        replace: "メール送信に使用するSMTPサーバーのアドレスを入力してください。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "SMTP Port",
+        replace: "SMTPポート"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Enter the SMTP server port that mail should be sent through.",
+        replace: "メール送信に使用するSMTPサーバーのポートを入力してください。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Encryption",
+        replace: "暗号化"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Select the type of encryption to use when sending mail.",
+        replace: "メール送信時に使用する暗号化タイプを選択してください。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Username <span",
+        replace: "ユーザー名 <span"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Password <span",
+        replace: "パスワード <span"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "The username to use when connecting to the SMTP server.",
+        replace: "SMTPサーバーへの接続に使用するユーザー名。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "The password to use in conjunction with the SMTP username. Leave blank to continue using the existing password. To set the password to an empty value enter <code>!e</code> into the field.",
+        replace: "SMTPユーザー名に対応するパスワード。既存のパスワードを使用し続ける場合は空欄のままにしてください。パスワードを空の値に設定するには、フィールドに <code>!e</code> と入力してください。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Mail From Name",
+        replace: "送信者名"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Mail From",
+        replace: "送信元アドレス"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Enter an email address that all outgoing emails will originate from.",
+        replace: "すべての送信メールの送信元となるメールアドレスを入力してください。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "The name that emails should appear to come from.",
+        replace: "メールの送信者として表示される名前。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "'Test Mail Settings'",
+        replace: "'メール設定のテスト'"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Click \"Test\" to begin the test.",
+        replace: "「テスト」をクリックしてテストを開始します。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "The test message was sent successfully.",
+        replace: "テストメッセージが正常に送信されました。"
+    },
+    {
+        file: 'resources/views/admin/settings/mail.blade.php',
+        search: "Mail settings have been updated successfully and the queue worker was restarted to apply these changes.",
+        replace: "メール設定が正常に更新され、変更を適用するためにキューワーカーが再起動されました。"
+    },
     // 日付・時刻フォーマットの日本語化
     {
         file: 'resources/scripts/components/server/files/FileObjectRow.tsx',
@@ -2576,14 +2914,8 @@ replacements.forEach(({ file, search, replace, regex }) => {
 
     if (fs.existsSync(filePath)) {
         let content = fs.readFileSync(filePath, 'utf8');
-
-        // 既に置換済みかチェック
-        if (content.includes(replace)) {
-            console.log(`[SKIP] Already patched: ${file} (${replace})`);
-            return;
-        }
-
         let matched = false;
+
         if (regex) {
             // Regex replacement
             if (regex.test(content)) {
@@ -2591,7 +2923,7 @@ replacements.forEach(({ file, search, replace, regex }) => {
                 matched = true;
             }
         } else if (content.includes(search)) {
-            // String replacement
+            // String replacement (Global)
             content = content.split(search).join(replace);
             matched = true;
         }
@@ -2601,8 +2933,13 @@ replacements.forEach(({ file, search, replace, regex }) => {
             console.log(`[OK] Patched: ${file}`);
             successCount++;
         } else {
-            console.warn(`[WARN] Pattern not found in ${file}: "${search || regex}"`);
-            failCount++;
+            // If not matched, check if it seems already patched
+            if (content.includes(replace)) {
+                console.log(`[SKIP] Already patched: ${file} (${replace})`);
+            } else {
+                console.warn(`[WARN] Pattern not found in ${file}: "${search || regex}"`);
+                failCount++;
+            }
         }
     } else {
         console.error(`[ERR] File not found: ${file}`);
